@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About restaurant</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Скрол на верх -->
+    <link rel="stylesheet" href="/css/scrollToTop.css">
+    <!-- slider-event -->
+    <link rel="stylesheet" href="/css/slider_event.css">
+    <!-- icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="/css/font-awesome.min.css">
+    <!-- My css -->
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/aboutRest.css">
+</head>
+
+
+<body>
+    <div class="backgr-img overflow-hidden">
+            <!-- Header -->
+    <div class="header-style overflow-hidden">
+        <!-- Navbar menu All -->
+        <div class="container">
+
+          <div class="" id="home">
+            <div class="pt-3">
+              <div class="d-flex f-row d-flex justify-content-between">
+                  <!-- Navbar menu --> 
+                  <div class="Navbar-menu_All col ">
+                      <div class="navbar-menu">
+                        <nav class="navbar navbar-expand-md bg-body-tertiary">
+                          <div class="container-fluid">
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Переключатель навигации">
+                              <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-text navbar-collapse justify-content-end" id="navbarSupportedContent">
+                              <ul class="navbar-nav menu-header mb-2 mb-lg-0">
+                                <li class="nav-item d-flex justify-content-start me-3">
+                                  <a class="nav-link active" aria-current="page" href="#">О ресторане</a>
+                                </li>
+                                <li class="nav-item d-flex justify-content-start me-3">
+                                  <a class="nav-link active" aria-current="page" href="/index.html#menu-list">Меню</a>
+                                </li>
+                                <li class="nav-item d-flex justify-content-start me-3">
+                                  <a class="nav-link active" aria-current="page" href="/index.html#event-id">Мероприятия</a>
+                                </li>
+                                <li class="nav-item d-flex justify-content-start me-3">
+                                  <a class="nav-link active" aria-current="page" href="#footer-id">Контакты</a>
+                                </li>
+                                <li class="nav-item d-flex justify-content-start">
+                                  <a class="nav-link active" aria-current="page" href="https://valentino-vrn.ru/" target="_blank">Valentino</a>
+                                </li>
+                                <li class="nav-item d-flex justify-content-start">
+                                  <div class="nav-btn btm-reserv-table-nav">
+                                      <button type="button " class="btn btn-main btn-danger" data-bs-toggle="modal" data-bs-target="#reserv-table">
+                                          Забронировать столик
+                                      </button>
+                                  </div>
+                                </li>
+                                <li class="nav-item d-flex justify-content-start">
+                                  <div class="nav-btn btm-in-reg-nav mt-3">
+                                      <button type="button" class="btn btn-main btn-danger" data-bs-toggle="modal" data-bs-target="#inp-reg">
+                                          Вход/Регистрация
+                                      </button>
+                                  </div>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </nav>
+                      </div>
+
+                      <!-- cont -->
+                      <div class="navbar-cont d-flex justify-content-between align-items-center">
+                          <!-- Кнопки регистр и брони -->
+                          <div class="reserv-in d-flex">
+                            <!-- бронь -->
+                            <div class="btm-reserv-table me-2">
+                                <button type="button" class="btn btn-main btn-danger btn-header_top" data-bs-toggle="modal"        data-bs-target="#reserv-table">
+                                    Забронировать столик
+                                </button>
+                            </div>
+                            <!-- вх -->
+                            <div class="btm-in-reg">
+                                <button type="button" class="btn btn-main btn-danger btn-header_top" data-bs-toggle="modal" data-bs-target="#inp-reg">
+                                    Вход/Регистрация
+                                </button>
+                            </div>
+                            </div>  
+                          <div class="adr-phone me-4">
+                          <span class="me-3">г. Воронеж ул.Урицкого, 70</span><span><a href="tel:+7(473) 233-33-01">+7(473) 233-33-01</a></span>
+                          </div>
+                      </div>
+                  </div>
+                  <!-- Logo -->
+                  <div class="logo-card">
+                    <!-- <div class="row"> -->
+                      <div class="img-Logo">
+                        <img src="/img/logo.png" class="img-fluid" alt="pinzeria-vrn" style="max-width: 190px; height: auto;">
+                      </div>
+                    <!-- </div> -->
+                    <div class="row">
+                      <!-- Card -->
+                      <div class="card">
+                        <a class="cardLink" href="/cart.html">
+                          <div class="cardItem">
+                            <div class="cardLogo">
+                              <i class="bi bi-basket2" style="color: rgb(250, 247, 247);"></i>
+                            </div>
+                            <div class="cardValue">
+                              <p><span class="total-num">0</span></p>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  
+              </div>
+            </div>
+          </div>                
+        </div>
+
+        <!-- овощи фоном top -->
+        <div class="vegies-fon">
+            <img class="left-top-img img-fluid scale-up-center" src="/img/aboutRest/pepper.png" alt="">
+            <img class="right-top-img img-fluid scale-up-center" src="/img/aboutRest/baz.png" alt="">
+          </div>
+        <!-- /овощи -->
+    </div>
+
+    <main class="st-relative">
+
+      <div class="background-circle">
+        <img class="bckg-top-rgth1 img-fluid" src="/img/aboutRest/Ellipse1.png" alt="">
+        <img class="bckg-top-rgth2 img-fluid" src="/img/aboutRest/Ellipse2.png" alt="">
+        <img class="bckg-top-lft1 img-fluid" src="/img/aboutRest/Ellipse3.png" alt="">
+        <img class="bckg-top-lft2 img-fluid" src="/img/aboutRest/Ellipse4.png" alt="">
+    </div>
+
+    <div class="container">
+      <div class="linkToPage d-flex mt-20 mb-20">
+          <div class="linkToHome">
+              <a class="DecorNo" href="/index.html#home-page">
+              <div class="txLinkHome ml-5">Главная</div>
+              </a>
+          </div>
+        </div>
+    </div> 
+
+    <div class="about-title">
+        <h2>О ресторане</h2>
+    </div>
+    
+      <div class="container">
+        <div class="top-block text-center">
+          <div class="row d-flex justify-content-center">
+          <div class="col-10 col-lg-7 d-flex justify-content-center align-items-center">
+                 <!-- слайдер -->
+                  <div class="slider-content">
+                    <div id="carouselExampleAutoplaying" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                      <div class="carousel-inner col-lg-3">
+                        <div class="carousel-item active data-bs-interval='500'">
+                          <img src="/img/slider/slider-img.png" class="d-block w-100 img-fluid" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                          <img src="/img/slider/slider-img2.png" class="d-block w-100 img-fluid" alt="...">
+                        </div>
+                      </div>
+                      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Предыдущий</span>
+                      </button>
+                      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Следующий</span>
+                      </button>
+                    </div>
+                  </div>
+                  <!-- /карусель -->
+          </div>
+          <!-- rigth block -->
+          <div class="col-10 col-lg-5">
+            <div class="row top-block-text1">
+              <p>Pinzeria by Bontempi — семейный ресторан авторской итальянской кухни в Воронеже</p>
+            </div>
+            <div class="row">
+              <div class="btm-reserv-table-nav ">
+                <button type="button " class="btn btn-main btn-danger btn-right-blok" data-bs-toggle="modal" data-bs-target="#reserv-table">
+                    Забронировать столик
+                </button>
+              </div>
+            </div>
+            <div class="row top-block2 mt-3">
+              <div class="col top-block-text2 d-flex justify-content-center">
+                <span>Это приятное место, которое завораживает своей домашней приятной атмосферой, удивительными блюдами и вкусами. 
+                  <br>
+                  <br> Ресторан с удовольствием посещают компании друзей, здесь можно провести приятный вечер с родными и коллегами. В ресторан с удовольствием приходят и дети.</span>
+              </div>
+              <div class="col">
+                <img class="img-spar" src="/img/aboutRest/spar.png" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+        <!-- 3d tour -->
+        <div class="row d-flex justify-content-center align-items-center mt-3">
+          <div class="btn-3d d-flex justify-content-center">
+            <a href="#home">
+              <button type="button" class="btn btn-main btn-danger btn-right-blok p-t_b-15 p-r_l-30" data-bs-toggle="" data-bs-target="">
+              Посмотреть 3D тур по ресторану</button>
+            </a>
+          </div>
+      </div>
+      <!-- second block -->
+      <div class="row d-flex justify-content-center mt-5">
+        <div class="col-10 col-lg-7">
+          <div class="row">
+            <div class="second-block_left_text">
+              <h2>
+                Пинца – новое слово в итальянской кухне
+              </h2>
+              <p>
+                Над созданием своего кулинарного шедевра шеф-повар работал тщательно, изучая кухню Римской империи и традиции итальянской кухни. Это блюдо значительно отличается от привычной пиццы не только формой, но и составом, количеством и набором ингредиентов.
+              </p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="second-block_img d-flex justify-content-between">
+              <div class="col-4">
+                <img class="img-fluid" src="/img/aboutRest/second-block_img1.png" alt="">
+              </div>
+              <div class="col-4">
+                <img class="img-fluid" src="/img/aboutRest/second-block_img2.png" alt="">
+              </div>
+              <div class="col-4">
+                <img class="img-fluid" src="/img/aboutRest/second-block_img3.png" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="second_block_text-btm">
+              <P>Из сочетания муки трех злаковых культур – сои, пшеницы и риса. Готовая смесь позволяет получить воздушную хрустящую, но сытную основу.
+                <br>
+                <br>
+                С добавлением уникальных дрожжей, которые привозят из Италии. Такой компонент придает особую текстуру тесту – при выпекании оно наполняется крупными пузырьками, становится по-настоящему воздушным, легким, хрустящим и ароматным.
+              </P>
+            </div>
+          </div>
+        </div>
+        <div class="col-10 col-lg-5 d-flex justify-content-center">
+          <div class="d-flex align-items-center justify-content-center">
+            <img class="img-second-block_pizza img-fluid" src="/img/aboutRest/second-block_pizza.png" alt="">
+          </div>
+        </div>
+      </div>
+      <!-- btm block -->
+      <div class="row d-flex justify-content-center align-items-center mt-5">
+        <div class="col-10 d-flex justify-content-center col-lg-5">
+          <img class="img-btm-block_rest" src="/img/aboutRest/btm-block_rest.png" alt="">
+        </div>
+        <div class="col-10 col-lg-7">
+          <div class="row btm-block-text_top">
+            <span>Организация торжественных и деловых мероприятий</span>
+          </div>
+          <div class="row btm-block-text_average">
+            <span>Площадь ресторана PINZERIA ® BY BONTEMPI составляет 850 кв.м. Организация торжественных мероприятий проходит в основном зале (до 80 гостей), VIP- зале (до 25 гостей), а также на открытой веранде, в зимний период веранда отапливается.</span>
+          </div>
+          <div class="row btm-block-img">
+            <div class="col d-flex justify-content-center"><img class="btm-block-img_icon img-fluid" src="/img/aboutRest/m2.png" alt=""></div>
+            <div class="col d-flex justify-content-center"><img class="btm-block-img_icon img-fluid" src="/img/aboutRest/guests.png" alt=""></div>
+            <div class="col d-flex justify-content-center"><img class="btm-block-img_icon img-fluid" src="/img/aboutRest/vip.png" alt=""></div>
+            <div class="col d-flex justify-content-center"><img class="btm-block-img_icon img-fluid" src="/img/aboutRest/veranda.png" alt=""></div>
+          </div>
+          <div class="row btm-block-text_btm">
+            <span>Мы комплексно подходим к созданию праздника мечты! Предоставляем колоритную локацию для фото-сессии, услуги кондитера, флориста, ведущего и банкетный сервис высокого уровня.</span>
+          </div>
+        </div>
+      </div>
+      <!-- event row -->
+       <div class="row btm-event-comm  mt-5">
+        <div class="col  btm-event-img"><img class="btm-event-img_icon" src="/img/aboutRest/corporate_event.png" alt=""></div>
+        <div class="col  btm-event-img"><img class="btm-event-img_icon" src="/img/aboutRest/master_cl.png" alt=""></div>
+        <div class="col  btm-event-img"><img class="btm-event-img_icon" src="/img/aboutRest/wedding.png" alt=""></div>
+        <div class="col  btm-event-img"><img class="btm-event-img_icon" src="/img/aboutRest/birthday.png" alt=""></div>
+        <div class="col  btm-event-img"><img class="btm-event-img_icon" src="/img/aboutRest/lanch.png" alt=""></div>
+       </div>
+      </div>
+    </main>
+
+        <!-- footer -->
+        <div class="container d-flex justify-content-center p-0">
+          <div class="footer" id="footer-id">
+            <footer class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 py-5 my-5 border-top">
+              <!-- row-cols-1 row-cols-sm-2 row-cols-md-5 -->
+              <div class="col-md-3 mb-3">
+                <h5>Контактная информация</h5>
+                <ul class="footer-btm-text nav flex-column">
+                  <li class="nav-item mb-2"><a href="mailto:pinzeria@test.ru" class="footer-mail nav-link p-0 text-body-secondary"><i class="fa fa-envelope mr-10" aria-hidden="true"></i>pinzeria@test.ru</a></li>
+                  <li class="nav-item mb-2"><a href="tel: +74732333301" class="footer-phone nav-link p-0 text-body-secondary"><i class="fa fa-phone mr-10" aria-hidden="true"></i>+7 (473) 233 33 01</a></li>
+                  <li class="nav-item mb-2"><a href="https://yandex.ru/maps/org/pinzeria_by_bontempi/135293455048/?indoorLevel=1&ll=39.199631%2C51.682955&z=16.66" class="footer-address nav-link p-0 text-body-secondary" target="_blank"><i class="fa fa-map-marker mr-10" aria-hidden="true"></i>Воронеж, ул. Урицкого 70</a></li>
+                  <li class="nav-item mb-2">
+                    <div class="social-media d-flex my-3">
+                      <div class="telegramm col-3 mr-10"><a href="https://t.me/pinzeria_vrn" target="_blank"><img class="img-fluid" src="/img/footer/tg.png" alt=""></a></div>
+                      <div class="whatsapp col-3 mr-10"><a href="#"><img class="img-fluid" src="/img/footer/wht.png" alt=""></a></div>
+                      <div class="vk col-3"><a href="https://vk.com/pinzeria" target="_blank"><img class="img-fluid" src="/img/footer/vk.png" alt=""></a></div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+        
+              <div class="col-md-3 mb-3">
+                <h5>Скачайте наше мобильное приложение</h5>
+                <ul class="footer-btm-text nav flex-column">
+                  <li class="nav-item mb-2">
+                    <a href="#" class="nav-link p-0 text-body-secondary d-flex align-items-center">
+                      <img class="img-fluid mr-10" src="/img/footer/AppStore.png" alt="">
+                      <b>Скачать из <strong>AppStore</strong></b></a>
+                  </li>
+                  <li class="nav-item mb-2">
+                    <a href="#" class="nav-link p-0 text-body-secondary d-flex align-items-center">
+                      <img class="img-fluid mr-10" src="/img/footer/GooglePlay.png" alt="">
+                      <b>Скачать из <strong>GooglePlay</strong></b></a>
+                  </li>
+                  <li class="nav-item mb-2">
+                    <a href="#" class="nav-link p-0 text-body-secondary d-flex align-items-center">
+                      <img class="img-fluid mr-10" src="/img/footer/RuStore.png" alt=""></a>
+                  </li>
+                </ul>
+              </div>
+              <div class="map-footer col-md-auto mb-3">
+                <div class="row">
+                  <p class="text-body-secondary">Мы на карте</p>
+                </div>
+                <div class="row">
+                  <div class="map p-0">
+                    <iframe class="m-0" src="https://yandex.ru/map-widget/v1/?um=constructor%3A61838059fbcce7078b79991fcad59498260675efa66b82944a1ba7433a16cd66&amp;source=constructor" width="325" height="243" frameborder="0"></iframe>
+                  </div>
+                </div>
+              </div>
+            </footer>
+          </div>
+         </div>      
+         <!-- bottom footer -->
+      <div class="btm-footer mt-4">
+        <div class="row">
+          <div class="col d-flex justify-content-end"><span>© ООО «Ресторатор» 2024</span></div>
+          <div class="col d-flex justify-content-start"><span>Политика конфиденциальности</span></div>
+        </div>
+      </div>  
+         <!-- /footer -->
+      
+
+      <!-- /bckgr-img -->
+    </div>
+       <!-- Модальное окно -->
+        <!-- reser-table -->
+        <div class="modal fade" id="reserv-table" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Заголовок модального окна</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+                </div>
+                <div class="modal-body">
+                ...
+                </div>
+                <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                <button type="button" class="btn btn-primary">Сохранить изменения</button>
+                </div>
+            </div>
+            </div>
+        </div>
+        <!-- Registration/input -->
+        <div class="modal fade" id="inp-reg" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                  <div class="modal-logo">
+                    <img src="/img/logo.png" alt="Закрыть окно" class="img-logo_modal">
+                  </div>
+                  <button type="button" class="btn-modal_reg btn-close " data-bs-dismiss="modal" aria-label="Закрыть"></button>
+                </div>
+                <div class="modal-body">
+                  <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1"><i class="fa fa-mobile" aria-hidden="true"></i></span>
+                    <span class="input-group-text" id="basic-addon1">+7</span>
+                    <input type="text" id="id-phone-input" class="form-control input-phone" placeholder="Номер телефона" aria-label="Номер телефона" aria-describedby="basic-addon1">
+                  </div>
+                  <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1"><i class="fa fa-key" aria-hidden="true"></i></span>
+                    <input type="password" class="form-control input-password" id="id-password-input" placeholder="Пароль" aria-label="Пароль" aria-describedby="basic-addon2">
+                    <button class="btn btn-outline-secondary" type="button" id="show-password">Показать</button>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" id="btn-input_id" class="btn btn-main btn-danger" data-bs-toggle="modal" data-bs-target="#inp-modal">
+                    Войти
+                  </button>
+                  <button type="button" class="btn btn-main btn-danger" data-bs-toggle="modal" data-bs-target="#reg-modal">
+                    Регистрация
+                  </button>
+                
+                </div>
+            </div>
+            </div>
+        </div>
+
+        <!-- Registration only -->
+        <div class="modal fade" id="reg-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+          <div class="modal-content">
+              <div class="modal-header">
+                <div class="modal-logo">
+                  <img src="/img/logo.png" alt="Закрыть окно" class="img-logo_modal">
+                </div>
+                <button type="button" class="btn-modal_reg btn-close " data-bs-dismiss="modal" aria-label="Закрыть"></button>
+              </div>
+              <div class="modal-body">
+                <div class="input-group mb-3">
+                  <span class="input-group-text" id="basic-addon1"><i class="fa fa-user-circle" aria-hidden="true"></i></span>
+                  <input type="text" class="form-control" placeholder="Имя" aria-label="Имя" aria-describedby="name-addon">
+                </div>
+                <div class="input-group mb-3">
+                  <span class="input-group-text" id="basic-addon1"><i class="fa fa-user-circle" aria-hidden="true"></i></span>
+                  <input type="text" class="form-control" placeholder="Фамилия" aria-label="Фамилия" aria-describedby="family-addon">
+                </div>
+                <div class="input-group mb-3">
+                  <span class="input-group-text" id="basic-addon1"><i class="fa fa-phone" aria-hidden="true"></i></i></span>
+                  <input type="tel" class="form-control" placeholder="Номер телефона" aria-label="Номер телефона" aria-describedby="phone-addon">
+                </div>
+                <div class="input-group mb-3">
+                  <span class="input-group-text" id="basic-addon1"><i class="fa fa-envelope-o" aria-hidden="true"></i></span>
+                  <input type="email" class="form-control" placeholder="example@example.ru" aria-label="Email" aria-describedby="email-addon">
+                </div>
+                <div class="input-group mb-3">
+                  <span class="input-group-text" id="basic-addon1"><i class="fa fa-calendar-o" aria-hidden="true"></i></i></span>
+                  <input type="date" class="form-control" aria-label="Дата рождения" aria-describedby="date-addon">
+                </div>
+                <div class="input-group mb-3">
+                  <span class="input-group-text" id="basic-addon1"><i class="fa fa-key" aria-hidden="true"></i></span>
+                  <input type="password" class="form-control" id="id-password-input1" placeholder="Пароль" aria-label="Пароль" aria-describedby="password1-addon">
+                  <button class="btn btn-outline-secondary" type="button" id="show-password1">Показать</button>
+                </div>
+                <div class="input-group mb-3">
+                  <span class="input-group-text" id="basic-addon1"><i class="fa fa-key" aria-hidden="true"></i></span>
+                  <input type="password" class="form-control" id="id-password-input2" placeholder="Повторите пароль" aria-label="Пароль" aria-describedby="password2-addon">
+                  <button class="btn btn-outline-secondary" type="button" id="show-password2">Показать</button>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-main btn-danger" data-bs-toggle="modal" data-bs-target="#registration">
+                      Зарегистрироваться
+                </button>
+              </div>
+          </div>
+          </div>
+        </div>
+    <!-- /modal -->
+
+
+    <!-- Scroll To Top -->
+    <button id="scrollToTopBtn" type="button" class="btn btn-outline-danger btn-lg" onclick="scrollToTop()">
+        <i class="fa fa-arrow-up btn-scroll-top" aria-hidden="true"></i>
+    </button>
+
+
+    <!-- Скрол на верх -->
+  <script src="/js/scrollToTop.js"></script>
+  <!-- Bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+  <!-- Counter cart -->
+  <script src="/js/cartNum.js"></script>
+</body>
+</html>
