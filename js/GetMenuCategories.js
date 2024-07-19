@@ -2,7 +2,7 @@
 // const myUrl = 'http://147.45.109.158:8881/api/category'
 const myUrl = 'https://pinzeria.tw1.ru/api/category'
 
-function fetchData (url) {
+async function fetchData (url) {
     return fetch(url)
     .then (response => {
         if (!response.ok) {
