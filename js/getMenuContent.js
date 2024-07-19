@@ -23,18 +23,26 @@ nameSubMenu.querySelector('h4').innerText = title;
     const myUrl = `https://pinzeria.tw1.ru/api/category?category=${title}`
 
     // создаем функцию запроса
-    function fetchData (url) {
-        return fetch(url)
-        .then (response => {
-            if (!response.ok) {
-                throw new Error(`HTTP error ${response.status}`);        
-            }
-            return response.json();
-        })
-        .catch (error => {
-            console.error(`Error data`, error);
-            throw error
-        })
+    async function fetchData (url) {
+        try {
+            respCont = await fetch (url);
+            return respCont.json()
+        }
+        catch (error) {
+            console.error('Error: ', error)
+        }
+
+        // return fetch(url)
+        // .then (response => {
+        //     if (!response.ok) {
+        //         throw new Error(`HTTP error ${response.status}`);        
+        //     }
+        //     return response.json();
+        // })
+        // .catch (error => {
+        //     console.error(`Error data`, error);
+        //     throw error
+        // })
     }
 
     // div меню
@@ -81,7 +89,8 @@ nameSubMenu.querySelector('h4').innerText = title;
                     </button>
                 </div>
                 <div class="descript_text text-muted">${productInfo.dishDescr}</div>
-                 <div class="price">
+                <div>
+                <div class="price">
                     <div class="price__currency"><span class="priceItem">${productInfo.dishPrice}</span>₽</div>
                 </div>
                 <div class="details-wrapper">
@@ -91,6 +100,7 @@ nameSubMenu.querySelector('h4').innerText = title;
                         <div class="items__control" data-action="plus">+</div>
                     </div>
                     <button data-cart type="button" class="btn btn-block btn-outline-warning btn-color">+ В корзину</button>
+                </div>
                 </div>
             </div>
             </div>

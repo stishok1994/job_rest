@@ -3,17 +3,13 @@
 const myUrl = 'https://pinzeria.tw1.ru/api/category'
 
 async function fetchData (url) {
-    return fetch(url)
-    .then (response => {
-        if (!response.ok) {
-            throw new Error(`HTTP error ${response.status}`);        
-        }
-        return response.json();
-    })
-    // .catch (error => {
-    //     console.error(`Error data`, error);
-    //     throw error 
-    // })
+  try {
+    const resp = await fetch(url);
+    return resp.json()
+  }
+  catch (error) {
+    console.error('Error: ', error)
+  }
 }
 
 // Применение функции

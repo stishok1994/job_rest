@@ -69,6 +69,7 @@
     .content_menu {
         display: flex;
         flex-wrap: wrap;
+        justify-content: center;
         /* justify-content: space-around; */
     }
     .menuContent {
@@ -255,7 +256,7 @@
         display: flex;
         flex-direction: column;
         align-items: end;
-        margin: 8px 10px 8px 0;
+        margin: 5px 10px 10px 0;
     }
     .btn {
         font-size: 12px;
@@ -384,6 +385,6 @@
             font-size: 20px;
         }
         .price {
-            margin: 10px 15px 10px 0;
+            margin: 5px 10px 10px 0;
         }
     }

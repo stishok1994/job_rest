@@ -1,16 +1,24 @@
-// Получаем категории для меню и отрисовываем содержимое категории
+// Получаем категории для страницы Меню и отрисовываем содержимое категории
 // const UrlMenuCat = 'http://147.45.109.158:8881/api/category'
 const UrlMenuCat = 'https://pinzeria.tw1.ru/api/category'
 
 
-function fetchData (url) {
-    return fetch(url)
-    .then (response => {
-        if (!response.ok) {
-            throw new Error(`HTTP error ${response.status}`);        
-        }
-        return response.json();
-    })
+async function fetchData (url) {
+    try {
+        respMenu = await fetch(url);
+        return respMenu.json()
+    }
+    catch (error) {
+        console.error('Error: ', error)
+    }
+
+    // return fetch(url)
+    // .then (response => {
+    //     if (!response.ok) {
+    //         throw new Error(`HTTP error ${response.status}`);        
+    //     }
+    //     return response.json();
+    // })
 }
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -38,15 +46,14 @@ fetchData(UrlMenuCat)
         parentDiv.insertAdjacentHTML('beforeend', cartItemHTML);
     }
 
-    initializeMenuClickListeners();
-
-    
-    
+    initializeMenuClickListeners();    
 })
 
 .catch(error => {
   console.error('Ошибка при получении данных:', error);
 });
+
+
 function initializeMenuClickListeners() {
 // Получаем все кнопки с классом "menu-item_btn"
 const menuButtons = document.querySelectorAll('.menu-item_btn');
@@ -78,11 +85,11 @@ console.log('Вы нажали на кнопку:', buttonText);
 //   Отрисовываем новый контент
 // Получаем ссылку на категорию
 // const myUrl = `http://147.45.109.158:8881/api/category?category=${buttonText}`
-const myUrl = `https://pinzeria.tw1.ru/api/category?category=${buttonText}`
+const UrlCategories = `https://pinzeria.tw1.ru/api/category?category=${buttonText}`
 
 
 // Применение функции
-fetchData(myUrl)
+fetchData(UrlCategories)
     .then(data => {
         console.log(`Полученные данные-`, data, `Type-`, typeof data) 
         const menuCont = data;
@@ -122,16 +129,18 @@ fetchData(myUrl)
                 </button>
             </div>
             <div class="descript_text text-muted">${productInfoCat.dishDescr}</div>
-             <div class="price">
-                <div class="price__currency"><span class="priceItem">${productInfoCat.dishPrice}</span>₽</div>
-            </div>
-            <div class="details-wrapper">
-                <div class="items counter-wrapper">
-                    <div class="items__control" data-action="minus">-</div>
-                    <div class="items__current" data-counter>1</div>
-                    <div class="items__control" data-action="plus">+</div>
+            <div>
+                <div class="price">
+                    <div class="price__currency"><span class="priceItem">${productInfoCat.dishPrice}</span>₽</div>
                 </div>
-                <button data-cart type="button" class="btnText btn btn-block  btn-outline-warning btn-color">+ В корзину</button>
+                <div class="details-wrapper">
+                    <div class="items counter-wrapper">
+                        <div class="items__control" data-action="minus">-</div>
+                        <div class="items__current" data-counter>1</div>
+                        <div class="items__control" data-action="plus">+</div>
+                    </div>
+                    <button data-cart type="button" class="btnText btn btn-block  btn-outline-warning btn-color">+ В корзину</button>
+                </div>
             </div>
         </div>
         </div>
@@ -149,6 +158,7 @@ fetchData(myUrl)
         });
 
     });
+    
 });
 
 });

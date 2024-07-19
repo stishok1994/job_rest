@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     <div class="items-action_cart" data-action="plus">+</div>
                 </div>
                 <div class="cart-price" data-price>${item.price}</div>
-                <div class="icon-delet"><i class="fa fa-times" aria-hidden="true" data-action="remove"></i></div>
+                <div class="icon-delet"><i class="fa fa-trash-o" aria-hidden="true" data-action="remove"></i></div>
             </div>
          </div>`;
     
