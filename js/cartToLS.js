@@ -34,7 +34,6 @@
         }
     
         localStorage.setItem('cart', JSON.stringify(cart));
-        // alert(`${cartItem.name} has been added to the cart`);
     }
 
 

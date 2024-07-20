@@ -80,7 +80,7 @@ function updateTotalPrice() {
     totalPrice = 0;
     priceItems.forEach(item=> {
         const amountIl = item.querySelector('.items-current_cart').innerText;
-        const priceEl = item.querySelector('.cart-price').innerText;
+        const priceEl = item.querySelector('#catr-price_id').innerText;
         totalPrice += amountIl*priceEl
     })
     totalPriceElement.textContent=totalPrice;

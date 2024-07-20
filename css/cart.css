@@ -79,16 +79,20 @@
             font-weight: bold;
         }
         .name-prod-cart {
-            font-size: 14px;
+            font-size: 13px;
             font-weight: 300;
+        }
+        .cart-name-title,
+        .itemForPrice {
+            padding: 0 2px;
         }
         .action-counter_cart {
             font-size: 12px;
             font-weight: 200;
-            width: 70px;
+            width: 55px;
         }
         .cart-price {
-            font-size: 15px;
+            font-size: 13px;
             font-weight: bold;
             margin: 0 auto;
         }
@@ -103,7 +107,7 @@
             font-size: 20px;
         }
         .total-price_blok div {
-            font-size: 20px;
+            font-size: 22px;
             font-weight: bold;
         }
         .name-prod-cart {
@@ -131,7 +135,7 @@
                 font-size: 22px;
             }
             .total-price_blok div {
-                font-size: 22px;
+                font-size: 24px;
                 font-weight: bold;
             }
             .name-prod-cart {
@@ -157,7 +161,7 @@
           /* Стили для экранов шириной 1200px и более */
           @media (min-width: 1200px) {
             .total-price_blok div {
-                font-size: 24px;
+                font-size: 28px;
                 font-weight: bold;
             }
             .name-prod-cart {

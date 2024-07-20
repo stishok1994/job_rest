@@ -1,4 +1,6 @@
-
+.container {
+    overflow: hidden; 
+}
 /* Меню навигации */
 .linkToPage {
     position: relative;
@@ -29,7 +31,7 @@
         width: 100%;
         height: auto;
         background-image: url('/img/header_img_backg.png'); 
-        padding: 0;        
+        padding: 0;       
     }
     .nameSubMenu h4 {
         font-size: 28px;
@@ -261,6 +263,7 @@
     .btn {
         font-size: 12px;
     }
+    
 
 
     /* Для различной ширины экрана */

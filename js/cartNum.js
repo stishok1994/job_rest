@@ -7,5 +7,5 @@ function coutingCart () {
     cartNum.textContent=numLS;
 }
 
-setInterval(coutingCart, 2000)
+setInterval(coutingCart, 1000)
 

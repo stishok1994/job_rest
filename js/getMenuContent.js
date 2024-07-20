@@ -14,8 +14,6 @@ console.log(title, title.typeof);
 const nameSubMenu = document.querySelector('.nameSubMenu');
 nameSubMenu.querySelector('h4').innerText = title;
 
-
-
 //  отрисовываем меню по категориям
 
     // Получаем ссылку на категорию
@@ -31,18 +29,6 @@ nameSubMenu.querySelector('h4').innerText = title;
         catch (error) {
             console.error('Error: ', error)
         }
-
-        // return fetch(url)
-        // .then (response => {
-        //     if (!response.ok) {
-        //         throw new Error(`HTTP error ${response.status}`);        
-        //     }
-        //     return response.json();
-        // })
-        // .catch (error => {
-        //     console.error(`Error data`, error);
-        //     throw error
-        // })
     }
 
     // div меню
@@ -70,11 +56,11 @@ nameSubMenu.querySelector('h4').innerText = title;
                 dishFat: dish.fatFullAmount, //жиры
                 dishCarbohy: dish.carbohydratesFullAmount, //углеводы
             };
-            console.log(`Type-`, typeof productInfo.dishWeight)
+            // console.log(`Type-`, typeof productInfo.dishWeight)
 
             // Создаем шаблон
             const cartItemHTML = 
-            `<div class="col-10 col-md-6 col-lg-4 mr-5">
+            `<div class="col-10 col-md-6 col-lg-4 mr-5 puff-in-center">
             <div class="card-product mb-4" data-id="${productInfo.id}">
             <img class="fullImg imgCart" src="${productInfo.dishImage}" alt="">
             <div class="card-body">
@@ -91,7 +77,7 @@ nameSubMenu.querySelector('h4').innerText = title;
                 <div class="descript_text text-muted">${productInfo.dishDescr}</div>
                 <div>
                 <div class="price">
-                    <div class="price__currency"><span class="priceItem">${productInfo.dishPrice}</span>₽</div>
+                    <div class="price__currency"><span class="priceItem">${productInfo.dishPrice}</span> ₽</div>
                 </div>
                 <div class="details-wrapper">
                     <div class="items counter-wrapper">

@@ -1,4 +1,6 @@
 // Получаем категории для страницы Меню и отрисовываем содержимое категории
+
+
 // const UrlMenuCat = 'http://147.45.109.158:8881/api/category'
 const UrlMenuCat = 'https://pinzeria.tw1.ru/api/category'
 
@@ -55,21 +57,23 @@ fetchData(UrlMenuCat)
 
 
 function initializeMenuClickListeners() {
+    
 // Получаем все кнопки с классом "menu-item_btn"
 const menuButtons = document.querySelectorAll('.menu-item_btn');
-
 // Получаем родительский блок с классом "content_menu"
 const contentParent = document.querySelector('.content_menu');
 
 // Добавляем обработчик события клика на каждую кнопку
 menuButtons.forEach((button) => {
-
 button.addEventListener('click', (event) => {
-// Получаем текст кнопки, на которую кликнул пользователь
-const buttonText = event.target.textContent;
-// Меняем название категории меню
-const nameSubMenu = document.querySelector('.nameSubMenu');
-nameSubMenu.querySelector('h4').innerText = buttonText;
+    
+    // Получаем текст кнопки, на которую кликнул пользователь
+    const buttonText = event.target.textContent;
+
+    // Меняем название категории меню
+    const nameSubMenu = document.querySelector('.nameSubMenu');
+    nameSubMenu.querySelector('h4').innerText = buttonText;
+    
 
 // Удаляем предыдущее содержимое блока "content_parrent"
 while (contentParent.firstChild) {
@@ -77,6 +81,8 @@ while (contentParent.firstChild) {
   }
 
 // Создаем новый дочерний блок с текстом кнопки
+
+// вызываем функцию транслитерации URL
 
     
 // Выводим текст кнопки в консоль
@@ -114,7 +120,7 @@ fetchData(UrlCategories)
         };
         // Создаем шаблон
         const contHTML = 
-        `<div class="col-10 col-md-6 col-lg-4 mb-3 mr-5">
+        `<div class="col-10 col-md-6 col-lg-4 mb-3 mr-5 puff-in-center">
         <div class="card-product" data-id="${productInfoCat.id}">
         <img class="fullImg imgCart" src="${productInfoCat.dishImage}" alt="">
         <div class="card-body">
@@ -131,7 +137,7 @@ fetchData(UrlCategories)
             <div class="descript_text text-muted">${productInfoCat.dishDescr}</div>
             <div>
                 <div class="price">
-                    <div class="price__currency"><span class="priceItem">${productInfoCat.dishPrice}</span>₽</div>
+                    <div class="price__currency"><span class="priceItem">${productInfoCat.dishPrice}</span> ₽</div>
                 </div>
                 <div class="details-wrapper">
                     <div class="items counter-wrapper">
@@ -165,5 +171,3 @@ fetchData(UrlCategories)
 
 };
   });
-
-
