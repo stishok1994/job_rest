@@ -1,18 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="/css/style2.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Авторизация</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- bottom footer -->
-  <div class="btm-footer mt-4">
-    <div class="row">
-      <div class="col d-flex justify-content-center"><span>© ООО «Ресторатор» 2024</span></div>
-      <div class="col d-flex justify-content-center"><span>Политика конфиденциальности</span></div>
-    </div>
- </div>
+    <main>
+        <section class="login-section">
+            <h1>Авторизация</h1>
+            <form id="login-form">
+                <label for="username">Телефон</label>
+                <input type="text" id="username" name="username" required>
+
+                <label for="password">Пароль</label>
+                <input type="password" id="password" name="password" required>
+
+                <button type="submit">Войти</button>
+            </form>
+            <div id="error-message" style="color: red;"></div>
+        </section>
+    </main>
+    <script src="/js/authorization.js"></script>
 </body>
 </html>
