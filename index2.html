@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Авторизация</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/style2.css">
 </head>
 <body>
     <main>
-        <section class="login-section">
+        <!-- Блок формы авторизации -->
+        <section id="login-section" class="hidden">
             <h1>Авторизация</h1>
             <form id="login-form">
                 <label for="username">Телефон</label>
@@ -20,8 +21,19 @@
                 <button type="submit">Войти</button>
             </form>
             <div id="error-message" style="color: red;"></div>
+            <div id="success-message" style="color: green; display: none;">
+                <p>Авторизация успешна!</p>
+                <img src="success-icon.png" alt="Иконка успешной авторизации" id="success-icon">
+            </div>
+        </section>
+        <!-- Блок личного кабинета -->
+        <section id="account-section" class="hidden">
+            <h1>Личный кабинет</h1>
+            <a href="dashboard.html">
+                <img src="logo.png" alt="Логотип" id="logo">
+            </a>
         </section>
     </main>
-    <script src="/js/authorization.js"></script>
+    <script src="js/temp.js"></script>
 </body>
 </html>
