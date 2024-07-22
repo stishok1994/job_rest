@@ -74,6 +74,7 @@ body {
     max-width: 100px;
 }
 
+
 /* Animation */
 
     /* texte Title */
@@ -370,6 +371,10 @@ body {
 }
 .btn-header_top {
     width: 230px;
+    height: auto;
+}
+.btm-pers-area {
+    width: 70px;
     height: auto;
 }
 .btn-header_bottom {
@@ -747,10 +752,16 @@ body {
         }
         .btn-header_bottom,
         .btn-header_top,
-        .btn-right-blok
+        .btn-right-blok,
+        .btm-pers-area
          {
             font-size: 12px;
             font-weight: 300;
+        }
+        .btm-pers-area {
+            width: 50px;
+            font-weight: bold;
+            padding: 5px auto;
         }
         .btn-header_top
          {
@@ -780,7 +791,8 @@ body {
             font-size: 16px;
             font-weight: 500;
         }
-        .nav-btn {
+        .nav-btn,
+        .pers-area-nav {
             display: none;
         }
         .adr-phone,
@@ -980,3 +992,10 @@ body {
             flex-direction: column;
           }
     }
+
+
+
+    /* for logIn */
+.view-hide {
+    display: none;
+}
