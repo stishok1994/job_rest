@@ -60,8 +60,8 @@ nameSubMenu.querySelector('h4').innerText = title;
 
             // Создаем шаблон
             const cartItemHTML = 
-            `<div class="col-10 col-md-6 col-lg-4 mr-5 puff-in-center">
-            <div class="card-product mb-4" data-id="${productInfo.id}">
+            `<div class="col-8 col-sm-7 col-md-5 col-lg-4 mb-3 mr-5">
+            <div class="card-product scale-in-hor-center" data-id="${productInfo.id}">
             <img class="fullImg imgCart" src="${productInfo.dishImage}" alt="">
             <div class="card-body">
                 <div class="nameTitleKBU d-flex">

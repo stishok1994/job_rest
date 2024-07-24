@@ -61,7 +61,7 @@ fetchData(myUrl)
             }
 
             // Создаем шаблон html
-            const cartItemHTML = `<div class="card-block col-sm-6 col-lg-4 mt-4${class_down_shift}">
+            const cartItemHTML = `<div class="card-block col-8 col-sm-5 col-lg-4 mt-4${class_down_shift}">
               <a class="card-link" id="link-to-content-page">
                 <div class="card cardImgPos d-flex">
                   <img src="${CatImg}" class="card-img" alt="Image">

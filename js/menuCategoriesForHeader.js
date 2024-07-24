@@ -120,8 +120,8 @@ fetchData(UrlCategories)
         };
         // Создаем шаблон
         const contHTML = 
-        `<div class="col-10 col-md-6 col-lg-4 mb-3 mr-5 puff-in-center">
-        <div class="card-product" data-id="${productInfoCat.id}">
+        `<div class="col-8 col-sm-7 col-md-5 col-lg-4 mb-3 mr-5">
+        <div class="card-product scale-in-hor-center" data-id="${productInfoCat.id}">
         <img class="fullImg imgCart" src="${productInfoCat.dishImage}" alt="">
         <div class="card-body">
             <div class="nameTitleKBU d-flex">

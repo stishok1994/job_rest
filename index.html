@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="/css/slider_event.css">
     <!-- My css -->
     <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/animation.css">
 </head>
 
 <body>
@@ -43,8 +44,8 @@
 
                   <!-- овощи фоном top -->
                   <div class="vegies-fon">
-                    <img class="left-top-img img-fluid scale-up-center" src="/img/header/salat-left.png" alt="">
-                    <img class="right-top-img img-fluid scale-up-center" src="/img/header/salat-right.png" alt="">
+                    <img class="left-top-img img-fluid scale-up-center jello-horizontal" src="/img/header/salat-left.png" alt="">
+                    <img class="right-top-img img-fluid scale-up-center jello-horizontal" src="/img/header/salat-right.png" alt="">
                   </div>
                   <!-- /овощи -->
 
@@ -210,15 +211,15 @@
                     <div class="header-bottom_img">
                       <img class="head-btm-img1 img-fluid" src="/img/header/header-cirkle.png" alt="">
                       <div class="head-btm-img2">
-                        <img class="board-top img-fluid rotate-vert-center" src="/img/header/pinzaa-header_bottom.png" alt="">
+                        <img class="board-top img-fluid bounce-in-top" src="/img/header/pinzaa-header_bottom.png" alt="">
                       </div>
                       
                     </div>
  
                     <!-- овощи фоном -->
                     <div class="vegies-fon-btm">
-                      <img class="left-btm-img img-fluid scale-up-center" src="/img/header/tomat-left.png" alt="">
-                      <img class="right-btm-img img-fluid scale-up-center" src="/img/header/bean-btm-rht.png" alt="">
+                      <img class="left-btm-img img-fluid scale-up-center jello-horizontal" src="/img/header/tomat-left.png" alt="">
+                      <img class="right-btm-img img-fluid scale-up-center jello-horizontal" src="/img/header/bean-btm-rht.png" alt="">
                     </div>
                     <!-- /овощи -->
                   
@@ -337,14 +338,15 @@
   </div>
 
   <div class="backgr-img pt-3">
-
+    <img class="slider-left_img1 img-fluid col" src="/img/slider/Ellipse-left1.png" alt="">
+    <img class="slider-left_img2 img-fluid col" src="/img/slider/Ellipse-left2.png" alt="">
     <!--Slaider-->
     <div class="container">
       <div class="slaider">
         <!-- Название -->
          
             <div class="slaider-title text-center">
-                Pinzeria by Bontempi — семейный ресторан авторской итальянской кухни в Воронеже
+                <span class="text-slider_title">Pinzeria by Bontempi — семейный ресторан авторской итальянской кухни в Воронеже</span>
             </div>
 
           
@@ -353,8 +355,6 @@
           <div class="row  d-flex align-items-center justify-content-center">
               <!-- левый блок -->
             <div class="slider-left col-md-2">
-              <img class="slider-left_img1 img-fluid col" src="/img/slider/Ellipse-left1.png" alt="">
-              <img class="slider-left_img2 img-fluid col" src="/img/slider/Ellipse-left2.png" alt="">
               <div class="slider-left_center_content">
                 <div class="slider-left_text">
                   <p>Это приятное место, которое завораживает своей домашней приятной атмосферой, удивительными блюдами и вкусами.</p>
@@ -421,7 +421,7 @@
           <p>Меню ресторана</p>
         </div>
         <div class="menu-content">
-          <div class="menu row" >
+          <div class="menu row d-flex justify-content-center" >
 
             <!-- Карточка меню -->
             <!-- <div class="card-block col-sm-6 col-md-4 col-xl-3 mt-4">
@@ -529,12 +529,12 @@
       </div>
      </div>      
      <!-- bottom footer -->
-  <div class="btm-footer mt-4">
-    <div class="row">
-      <div class="col d-flex justify-content-end"><span>© ООО «Ресторатор» 2024</span></div>
-      <div class="col d-flex"><span>Политика конфиденциальности</span></div>
+     <div class="btm-footer mt-4">
+      <div class="row" style="max-width: 100%;">
+        <div class="col d-flex justify-content-end"><span>© ООО «Ресторатор» 2024</span></div>
+        <div class="col d-flex"><span>Политика конфиденциальности</span></div>
+      </div>
     </div>
-  </div>  
      <!-- /footer -->
      
 
@@ -558,7 +558,7 @@
     <script src="/js/authorization.js"></script>
 
     <!-- Anymation -->
-     <script src="/js/anymation.js"></script>
+     <script src="/js/animation.js"></script>
     <!-- To LS -->
     <script src="/js/cartToLS.js"></script>
     <!-- Counter cart -->
