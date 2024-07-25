@@ -4,7 +4,7 @@
     /* texte Title */
     .name-title h1 {
         transform: scale(0.94);
-        animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
+        animation: scale 3.5s forwards cubic-bezier(0.5, 1, 0.89, 1);
         }
     @keyframes scale {
     100% {
@@ -254,8 +254,8 @@
 
 /* veget on backgr */
 .jello-horizontal {
-	-webkit-animation: jello-horizontal 2s ease-in both;
-	        animation: jello-horizontal 2s ease-in both;
+	-webkit-animation: jello-horizontal 3s ease-in both;
+	        animation: jello-horizontal 3s ease-in both;
 }
 
 
@@ -381,8 +381,8 @@
   
   /* Cart */
   .flip-in-hor-bottom {
-	-webkit-animation: flip-in-hor-bottom 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-	        animation: flip-in-hor-bottom 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	-webkit-animation: flip-in-hor-bottom 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: flip-in-hor-bottom 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
  @-webkit-keyframes flip-in-hor-bottom {
@@ -413,8 +413,8 @@
   /* about Rest */
     /* grass */ 
   .rotate-scale-down {
-	-webkit-animation: rotate-scale-down 1.5s linear 2.5s both;
-	        animation: rotate-scale-down 1.5s linear 2.5s both;
+	-webkit-animation: rotate-scale-down 1.5s linear 2s both;
+	        animation: rotate-scale-down 1.5s linear 2s both;
 }
 @-webkit-keyframes rotate-scale-down {
     0% {
@@ -476,8 +476,7 @@
   }
   
 
-  
-  
+   
   
 
     /* animation end */
