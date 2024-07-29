@@ -253,14 +253,17 @@
         align-items: end;
         margin: 5px 10px 10px 0;
     }
-    .btn {
+    /* .btn {
+        font-size: 11px;
+    } */
+    .btn .btn-main .btn-danger .btn-header_top {
         font-size: 12px;
     }
     
 
 
     /* Для различной ширины экрана */
-    @media (min-width: 350px) {
+    @media (min-width: 300px) {
         .menu_block h1 {
             font-size: 30px;
             font-weight: 400;
@@ -300,8 +303,8 @@
             font-weight: bold;
         }
         .card-product {
-            margin-left: 20px;
-            margin-right: 20px;
+            margin-left: 5px;
+            margin-right: 5px;
           }
         .content_menu {
         padding-left: 20px;
@@ -312,6 +315,9 @@
             border-radius: 20px;
             padding: 0 10px;
             height: 20px;
+        }
+        #add_Cart {
+            font-size: 10px;
         }
     
     }

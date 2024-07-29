@@ -8,31 +8,37 @@
 </head>
 <body>
     <main>
-        <!-- Блок формы авторизации -->
-        <section id="login-section" class="hidden">
-            <h1>Авторизация</h1>
-            <form id="login-form">
-                <label for="username">Телефон</label>
-                <input type="text" id="username" name="username" required>
-
-                <label for="password">Пароль</label>
-                <input type="password" id="password" name="password" required>
-
-                <button type="submit">Войти</button>
-            </form>
-            <div id="error-message" style="color: red;"></div>
-            <div id="success-message" style="color: green; display: none;">
-                <p>Авторизация успешна!</p>
-                <img src="success-icon.png" alt="Иконка успешной авторизации" id="success-icon">
+      <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+              <div class="modal-logo">
+                <img src="/img/logo.png" alt="Закрыть окно" class="img-logo_modal">
+              </div>
+              <button type="button" class="btn-modal_reg btn-close " data-bs-dismiss="modal" aria-label="Закрыть"></button>
             </div>
-        </section>
-        <!-- Блок личного кабинета -->
-        <section id="account-section" class="hidden">
-            <h1>Личный кабинет</h1>
-            <a href="dashboard.html">
-                <img src="logo.png" alt="Логотип" id="logo">
-            </a>
-        </section>
+            <div class="modal-body">
+              <div class="input-group mb-3">
+                <span class="input-group-text" id="basic-addon1"><i class="fa fa-mobile" aria-hidden="true"></i></span>
+                <span class="input-group-text" id="basic-addon1">+7</span>
+                <input type="text" id="id-phone-input" class="form-control input-phone" placeholder="Номер телефона" aria-label="Номер телефона" aria-describedby="basic-addon1">
+              </div>
+              <div class="input-group mb-3">
+                <span class="input-group-text" id="basic-addon1"><i class="fa fa-key" aria-hidden="true"></i></span>
+                <input type="password" class="form-control input-password id-password-input_class" id="id-password-input" placeholder="Пароль" aria-label="Пароль" aria-describedby="basic-addon2">
+                <button class="btn btn-outline-secondary" type="button" id="show-password">Показать</button>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" id="btn-input_id" data-bs-dismiss="modal"  class="btn btn-main btn-danger">
+                Войти
+              </button>
+              <button type="button" class="btn btn-main btn-danger" data-bs-toggle="modal" data-bs-target="#reg-modal">
+                Регистрация
+              </button>
+            
+            </div>
+        </div>
+        </div>
     </main>
     <script src="js/temp.js"></script>
 </body>

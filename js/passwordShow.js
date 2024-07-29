@@ -1,36 +1,17 @@
-// for input
-const passwordInput = document.getElementById('id-password-input');
-const showPasswordButton = document.getElementById('show-password');
+// все поля ввода пароля
+const passwordInputs = document.querySelectorAll('.id-password-input_class');
 
-showPasswordButton.addEventListener('click', function() {
-    if (passwordInput.type === 'password') {
-        passwordInput.type = 'text';
+//все кнопки показать для полей ввода пароля
+const showPasswordButtons = document.querySelectorAll('[id^="show-password"]');
+
+// обработчик клика для кнопок
+showPasswordButtons.forEach((button, index) => {
+  button.addEventListener('click', () => {
+    // меняем тип поля ввода пароля
+    if (passwordInputs[index].type === 'password') {
+      passwordInputs[index].type = 'text';
     } else {
-        passwordInput.type = 'password';
+      passwordInputs[index].type = 'password';
     }
+  });
 });
-
-// for registration name
-const passwordInput1 = document.getElementById('password-input1');
-const showPasswordButton1 = document.getElementById('show-password1');
-
-showPasswordButton1.addEventListener('click', function() {
-    if (passwordInput1.type === 'password') {
-        passwordInput1.type = 'text';
-    } else {
-        passwordInput1.type = 'password';
-    }
-});
-
-// for registration family
-const passwordInput2 = document.getElementById('password-input2');
-const showPasswordButton2 = document.getElementById('show-password2');
-
-showPasswordButton2.addEventListener('click', function() {
-    if (passwordInput2.type === 'password') {
-        passwordInput2.type = 'text';
-    } else {
-        passwordInput2.type = 'password';
-    }
-});
-

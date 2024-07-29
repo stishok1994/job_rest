@@ -145,7 +145,7 @@ fetchData(UrlCategories)
                         <div class="items__current" data-counter>1</div>
                         <div class="items__control" data-action="plus">+</div>
                     </div>
-                    <button data-cart type="button" class="btnText btn btn-block  btn-outline-warning btn-color">+ В корзину</button>
+                    <button data-cart type="button" id="add_Cart" class="btnText btn btn-block  btn-outline-warning btn-color">+ В корзину</button>
                 </div>
             </div>
         </div>

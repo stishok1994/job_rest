@@ -1,6 +1,7 @@
-// request authorization
+// request authorization registration
 
 const AuthURL = 'https://pinzeria.tw1.ru/auth/login/'
+const RegURL = 'https://pinzeria.tw1.ru/auth/register/'
 
 
 // Проверяем авторизацию
@@ -8,6 +9,7 @@ document.addEventListener('DOMContentLoaded', ViewHideAccount());
 // Авторизация
 document.getElementById('btn-input_id').addEventListener('click', handleLogin);
 
+document.getElementById('btn-reg').addEventListener('click', handleReg);
 
 
 // Проверяем наличие авторизации (токена)
@@ -38,7 +40,7 @@ function ViewHideAccount () {
     }  
 }
 
-
+// Авторизация
 async function login (userData) {
     try {
         const responce = await fetch (AuthURL, {
@@ -90,8 +92,74 @@ async function handleLogin () {
       }
 }
 
+// Регистрация
+async function handleReg () {
+
+    try {
+        const userName = document.getElementById ('phone-input_reg').value;
+        const password = document.getElementById('password-input_reg').value;
+        const emailInp = document.getElementById ('mail-input_reg').value;
+        const firstName = document.getElementById ('first_name-input_reg').value;
+        const lastName = document.getElementById ('last-name-input_reg').value;
+        const dateBirth = document.getElementById ('date-birth-input_reg').value;
+
+        // второй пароль
+        const password2 = document.getElementById('password-input_reg2').value;
+        
+        // объект
+        const userData = {
+            username: userName,
+            password: password,
+            email: emailInp,
+            first_name: firstName,
+            last_name: lastName,
+            date_birth: dateBirth
+        };
+
+        // console.log('Запрос:', userData);
+
+        if (password===password2) {
+          const token = await RegIn(userData)
+            // console.log(token)  
+            saveToken(token)
+            ViewHideAccount ()
+            console.log('Токен:', localStorage.getItem('authToken'));  
+        }
+        else {
+            
+        }
+        
+    }
+    catch (error) {
+        // alert('Error')
+        console.error(error);
+        alert('Пользователь с таким телефоном уже зарегистрирован ');
+      }
+}
 
 
+async function RegIn (userData) {
+    try {
+        const responce = await fetch (RegURL, {
+            method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(userData)
+            });
+    
+            if (responce.ok) {
+                const data = await responce.json();
+                return data.access_token // get token
+            }
+            else {
+                // throw new Error('Пользователь с таким телефоном уже зарегистрирован');
+            }}
+    catch (error) {
+        // console.error(error);
+        throw error;
+    }
+        };
 
 
 

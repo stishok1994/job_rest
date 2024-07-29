@@ -116,13 +116,13 @@
                                         </button>
                                     </div>
                                     <!-- вх -->
-                                    <div id="logIn-action_1" class="btm-in-reg view-hide">
+                                    <div id="logIn-action_1" class="btm-in-reg">
                                         <button type="button" class="btn btn-main btn-danger btn-header_top" data-bs-toggle="modal" data-bs-target="#inp-reg">
                                             Вход/Регистрация
                                         </button>
                                     </div>
                                     <!-- Личный кабинет -->
-                                    <div id="account-success_1" class="pers-area">
+                                    <div id="account-success_1" class="pers-area view-hide">
                                       <a href="/persArea.html">
                                         <button type="button" class="btn btn-main btn-danger btm-pers-area">
                                           <i class="fa fa-user" aria-hidden="true"></i>
@@ -225,7 +225,6 @@
                   
                   </div>
                 </div>
-                
             </div>
             
             <!-- Модальное окно -->
@@ -265,7 +264,7 @@
                       </div>
                       <div class="input-group mb-3">
                         <span class="input-group-text" id="basic-addon1"><i class="fa fa-key" aria-hidden="true"></i></span>
-                        <input type="password" class="form-control input-password" id="id-password-input" placeholder="Пароль" aria-label="Пароль" aria-describedby="basic-addon2">
+                        <input type="password" class="form-control input-password id-password-input_class" id="id-password-input" placeholder="Пароль" aria-label="Пароль" aria-describedby="basic-addon2">
                         <button class="btn btn-outline-secondary" type="button" id="show-password">Показать</button>
                       </div>
                     </div>
@@ -282,6 +281,22 @@
                 </div>
             </div>
 
+
+
+            <!-- <div class="modal-dialog">
+              <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="btn-modal_reg btn-close " data-bs-dismiss="modal" aria-label="Закрыть"></button>
+                  </div>
+                  <div class="modal-body">
+                    Тест
+                  </div>
+                  <div class="modal-footer">                   
+                  
+                  </div>
+              </div>
+              </div> -->
+
             <!-- Registration only -->
             <div class="modal fade" id="reg-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
               <div class="modal-dialog">
@@ -295,37 +310,37 @@
                   <div class="modal-body">
                     <div class="input-group mb-3">
                       <span class="input-group-text" id="basic-addon1"><i class="fa fa-user-circle" aria-hidden="true"></i></span>
-                      <input type="text" class="form-control" placeholder="Имя" aria-label="Имя" aria-describedby="name-addon">
+                      <input type="text" id="first_name-input_reg" class="form-control" placeholder="Имя" aria-label="Имя" aria-describedby="name-addon">
                     </div>
                     <div class="input-group mb-3">
                       <span class="input-group-text" id="basic-addon1"><i class="fa fa-user-circle" aria-hidden="true"></i></span>
-                      <input type="text" class="form-control" placeholder="Фамилия" aria-label="Фамилия" aria-describedby="family-addon">
+                      <input type="text" id="last-name-input_reg" class="form-control" placeholder="Фамилия" aria-label="Фамилия" aria-describedby="family-addon">
                     </div>
                     <div class="input-group mb-3">
                       <span class="input-group-text" id="basic-addon1"><i class="fa fa-phone" aria-hidden="true"></i></i></span>
-                      <input type="tel" class="form-control" placeholder="Номер телефона" aria-label="Номер телефона" aria-describedby="phone-addon">
+                      <input type="tel" id="phone-input_reg" class="form-control" placeholder="Номер телефона" aria-label="Номер телефона" aria-describedby="phone-addon">
                     </div>
                     <div class="input-group mb-3">
                       <span class="input-group-text" id="basic-addon1"><i class="fa fa-envelope-o" aria-hidden="true"></i></span>
-                      <input type="email" class="form-control" placeholder="example@example.ru" aria-label="Email" aria-describedby="email-addon">
+                      <input type="email" id="mail-input_reg" class="form-control" placeholder="example@example.ru" aria-label="Email" aria-describedby="email-addon">
                     </div>
                     <div class="input-group mb-3">
                       <span class="input-group-text" id="basic-addon1"><i class="fa fa-calendar-o" aria-hidden="true"></i></i></span>
-                      <input type="date" class="form-control" aria-label="Дата рождения" aria-describedby="date-addon">
+                      <input type="date" id="date-birth-input_reg" class="form-control" aria-label="Дата рождения" aria-describedby="date-addon">
                     </div>
                     <div class="input-group mb-3">
                       <span class="input-group-text" id="basic-addon1"><i class="fa fa-key" aria-hidden="true"></i></span>
-                      <input type="password" class="form-control" id="id-password-input1" placeholder="Пароль" aria-label="Пароль" aria-describedby="password1-addon">
+                      <input type="password" id="password-input_reg" class="form-control id-password-input_class" placeholder="Пароль" aria-label="Пароль" aria-describedby="password1-addon">
                       <button class="btn btn-outline-secondary" type="button" id="show-password1">Показать</button>
                     </div>
                     <div class="input-group mb-3">
                       <span class="input-group-text" id="basic-addon1"><i class="fa fa-key" aria-hidden="true"></i></span>
-                      <input type="password" class="form-control" id="id-password-input2" placeholder="Повторите пароль" aria-label="Пароль" aria-describedby="password2-addon">
+                      <input type="password" id="password-input_reg2" class="form-control id-password-input_class" placeholder="Повторите пароль" aria-label="Пароль" aria-describedby="password2-addon">
                       <button class="btn btn-outline-secondary" type="button" id="show-password2">Показать</button>
                     </div>
                   </div>
                   <div class="modal-footer">
-                    <button type="button" class="btn btn-main btn-danger" data-bs-toggle="modal" data-bs-target="#registration">
+                    <button type="button" id="btn-reg" class="btn btn-main btn-danger" data-bs-target="#registration">
                           Зарегистрироваться
                     </button>
                   </div>
@@ -554,8 +569,9 @@
   <script src="/js/GetMenuCategories.js" ></script>
   <!-- Password Show -->
    <script src="/js/passwordShow.js"></script>
-   <!-- LogIn -->
+   <!-- LogIn / Registr -->
     <script src="/js/authorization.js"></script>
+    <!-- <script src="/js/registration.js"></script> -->
 
     <!-- Anymation -->
      <script src="/js/animation.js"></script>
