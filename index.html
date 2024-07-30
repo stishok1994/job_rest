@@ -257,24 +257,26 @@
                       <button type="button" class="btn-modal_reg btn-close " data-bs-dismiss="modal" aria-label="Закрыть"></button>
                     </div>
                     <div class="modal-body">
-                      <div class="input-group mb-3">
+                      <form id="authorization-form">
+                      <div class="input-group mt-3">
                         <span class="input-group-text" id="basic-addon1"><i class="fa fa-mobile" aria-hidden="true"></i></span>
                         <span class="input-group-text" id="basic-addon1">+7</span>
-                        <input type="text" id="id-phone-input" class="form-control input-phone" placeholder="Номер телефона" aria-label="Номер телефона" aria-describedby="basic-addon1">
+                        <input type="text" id="id-phone-input_login" class="form-control input-phone" placeholder="Номер телефона" aria-label="Номер телефона" aria-describedby="basic-addon1">
                       </div>
-                      <div class="input-group mb-3">
+                      <div class="invalid-feedback text-error-mass" id="phone-error-message_login">Пожалуйста, введите действительный номер телефона.</div>
+                      <div class="input-group mt-3">
                         <span class="input-group-text" id="basic-addon1"><i class="fa fa-key" aria-hidden="true"></i></span>
-                        <input type="password" class="form-control input-password id-password-input_class" id="id-password-input" placeholder="Пароль" aria-label="Пароль" aria-describedby="basic-addon2">
+                        <input type="password" id="id-password-input_login" class="form-control input-password id-password-input_class" placeholder="Пароль" aria-label="Пароль" aria-describedby="basic-addon2">
                         <button class="btn btn-outline-secondary" type="button" id="show-password">Показать</button>
                       </div>
-                    </div>
-                    <div class="modal-footer">
-                      <button type="button" id="btn-input_id" data-bs-dismiss="modal"  class="btn btn-main btn-danger">
+                      <div class="invalid-feedback text-error-mass" id="password-error-message_login">Пароль должен быть не менее 8 символов.</div>
+                      <button type="submit" id="btn-input_id" class="btn btn-main btn-danger" >
                         Войти
                       </button>
-                      <button type="button" class="btn btn-main btn-danger" data-bs-toggle="modal" data-bs-target="#reg-modal">
+                      <button type="button" class="btn btn-main btn-danger" data-bs-target="#reg-modal">
                         Регистрация
                       </button>
+                      </form>
                     
                     </div>
                 </div>
@@ -282,20 +284,6 @@
             </div>
 
 
-
-            <!-- <div class="modal-dialog">
-              <div class="modal-content">
-                  <div class="modal-header">
-                    <button type="button" class="btn-modal_reg btn-close " data-bs-dismiss="modal" aria-label="Закрыть"></button>
-                  </div>
-                  <div class="modal-body">
-                    Тест
-                  </div>
-                  <div class="modal-footer">                   
-                  
-                  </div>
-              </div>
-              </div> -->
 
             <!-- Registration only -->
             <div class="modal fade" id="reg-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">

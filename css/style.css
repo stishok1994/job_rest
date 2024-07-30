@@ -103,6 +103,9 @@ body {
     .btn-modal_reg {
         margin-left: 0 !important;
     }
+    .text-error-mass {
+        font-size: 12px;
+    }
 
     /* /modal */
 
