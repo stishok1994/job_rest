@@ -204,7 +204,6 @@ async function handleLogin () {
         // console.log('Токен:', localStorage.getItem('authToken'));
         // закрытие модульного окна
         // hideModal ()
-        ViewHideAccount ()
     }
     catch (error) {
         // alert('Error')
@@ -215,7 +214,7 @@ async function handleLogin () {
 
 // Проверяем наличие авторизации (токена)
 function ViewHideAccount () {
-    console.log('test')
+    // console.log('test')
     const accountSection1 = document.getElementById('account-success_1');
     const accountSection2 = document.getElementById('account-success_2');
     const loginSection1 = document.getElementById('logIn-action_1');
@@ -295,13 +294,14 @@ async function handleReg () {
         const token = await RegIn(userData)
         saveToken(token)
         ViewHideAccount ()
-        console.log('Токен:', localStorage.getItem('authToken'));  
+        // console.log('Токен:', localStorage.getItem('authToken'));  
         
     }
     catch (error) {
         // alert('Error')
-        console.error(error);
-        alert('Пользователь с таким телефоном уже зарегистрирован ');
+        // console.error(error);
+        alert(error);
+        
       }
 }
 
@@ -323,10 +323,10 @@ async function RegIn (userData) {
                 return data.access_token // get token
             }
             else {
-                // throw new Error('Пользователь с таким телефоном уже зарегистрирован');
+                throw new Error('Пользователь с таким телефоном уже зарегистрирован');
             }}
     catch (error) {
-        // console.error(error);
+       
         throw error;
     }
         };
