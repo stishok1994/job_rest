@@ -292,43 +292,53 @@
                     </div>
                     <button type="button" class="btn-modal_reg btn-close " data-bs-dismiss="modal" aria-label="Закрыть"></button>
                   </div>
-                  <div class="modal-body">
-                    <div class="input-group mb-3">
-                      <span class="input-group-text" id="basic-addon1"><i class="fa fa-user-circle" aria-hidden="true"></i></span>
-                      <input type="text" id="first_name-input_reg" class="form-control" placeholder="Имя" aria-label="Имя" aria-describedby="name-addon">
+                  <form id="registration-form">
+                    <div class="modal-body">
+                      <div class="input-group mb-3">
+                        <span class="input-group-text" id="basic-addon1"><i class="fa fa-user-circle" aria-hidden="true"></i></span>
+                        <input type="text" id="first_name-input_reg" class="form-control" placeholder="Имя" aria-label="Имя" aria-describedby="name-addon">
+                      </div>
+                      <div class="invalid-feedback text-error-mass" id="first-name-error-message_reg">Введите имя</div>
+                      <div class="input-group mb-3">
+                        <span class="input-group-text" id="basic-addon1"><i class="fa fa-user-circle" aria-hidden="true"></i></span>
+                        <input type="text" id="last-name-input_reg" class="form-control" placeholder="Фамилия" aria-label="Фамилия" aria-describedby="family-addon">
+                      </div>
+                      <div class="invalid-feedback text-error-mass" id="last-name-error-message_reg">Введите имя</div>
+                      <div class="input-group mb-3">
+                        <span class="input-group-text" id="basic-addon1"><i class="fa fa-phone" aria-hidden="true"></i></i></span>
+                        <input type="tel" id="phone-input_reg" class="form-control" placeholder="Номер телефона" aria-label="Номер телефона" aria-describedby="phone-addon">
+                      </div>
+                      <div class="invalid-feedback text-error-mass" id="phone-error-message_reg">Введите телефон</div>
+                      <div class="input-group mb-3">
+                        <span class="input-group-text" id="basic-addon1"><i class="fa fa-envelope-o" aria-hidden="true"></i></span>
+                        <input type="email" id="mail-input_reg" class="form-control" placeholder="example@example.ru" aria-label="Email" aria-describedby="email-addon">
+                      </div>
+                      <div class="invalid-feedback text-error-mass" id="mail-error-message_reg">Введите электронную почту</div>
+                      <div class="input-group mb-3">
+                        <span class="input-group-text" id="basic-addon1"><i class="fa fa-calendar-o" aria-hidden="true"></i></i></span>
+                        <input type="date" id="date-birth-input_reg" class="form-control" aria-label="Дата рождения" aria-describedby="date-addon">
+                      </div>
+                      <div class="invalid-feedback text-error-mass" id="data-birth-error-message_reg">Введите дату рождения</div>
+                      <div class="input-group mb-3">
+                        <span class="input-group-text" id="basic-addon1"><i class="fa fa-key" aria-hidden="true"></i></span>
+                        <input type="password" id="password1-input_reg" class="form-control id-password-input_class" placeholder="Пароль" aria-label="Пароль" aria-describedby="password1-addon">
+                        <button class="btn btn-outline-secondary" type="button" id="show-password1">Показать</button>
+                      </div>
+                      <div class="invalid-feedback text-error-mass" id="password1-error-message_reg">Введите пароль</div>
+                      <div class="input-group mb-3">
+                        <span class="input-group-text" id="basic-addon1"><i class="fa fa-key" aria-hidden="true"></i></span>
+                        <input type="password" id="password2-input_reg" class="form-control id-password-input_class" placeholder="Повторите пароль" aria-label="Пароль" aria-describedby="password2-addon">
+                        <button class="btn btn-outline-secondary" type="button" id="show-password2">Показать</button>
+                      </div>
+                      <div class="invalid-feedback text-error-mass" id="password2-error-message_reg">Введите пароль</div>
+                      <div class="invalid-feedback text-error-mass" id="password-match-error-message_reg">Введенные пароли не совпадают</div>
                     </div>
-                    <div class="input-group mb-3">
-                      <span class="input-group-text" id="basic-addon1"><i class="fa fa-user-circle" aria-hidden="true"></i></span>
-                      <input type="text" id="last-name-input_reg" class="form-control" placeholder="Фамилия" aria-label="Фамилия" aria-describedby="family-addon">
+                    <div class="modal-footer">
+                      <button type="submit" id="btn-reg" class="btn btn-main btn-danger" data-bs-target="#registration">
+                            Зарегистрироваться
+                      </button>
                     </div>
-                    <div class="input-group mb-3">
-                      <span class="input-group-text" id="basic-addon1"><i class="fa fa-phone" aria-hidden="true"></i></i></span>
-                      <input type="tel" id="phone-input_reg" class="form-control" placeholder="Номер телефона" aria-label="Номер телефона" aria-describedby="phone-addon">
-                    </div>
-                    <div class="input-group mb-3">
-                      <span class="input-group-text" id="basic-addon1"><i class="fa fa-envelope-o" aria-hidden="true"></i></span>
-                      <input type="email" id="mail-input_reg" class="form-control" placeholder="example@example.ru" aria-label="Email" aria-describedby="email-addon">
-                    </div>
-                    <div class="input-group mb-3">
-                      <span class="input-group-text" id="basic-addon1"><i class="fa fa-calendar-o" aria-hidden="true"></i></i></span>
-                      <input type="date" id="date-birth-input_reg" class="form-control" aria-label="Дата рождения" aria-describedby="date-addon">
-                    </div>
-                    <div class="input-group mb-3">
-                      <span class="input-group-text" id="basic-addon1"><i class="fa fa-key" aria-hidden="true"></i></span>
-                      <input type="password" id="password-input_reg" class="form-control id-password-input_class" placeholder="Пароль" aria-label="Пароль" aria-describedby="password1-addon">
-                      <button class="btn btn-outline-secondary" type="button" id="show-password1">Показать</button>
-                    </div>
-                    <div class="input-group mb-3">
-                      <span class="input-group-text" id="basic-addon1"><i class="fa fa-key" aria-hidden="true"></i></span>
-                      <input type="password" id="password-input_reg2" class="form-control id-password-input_class" placeholder="Повторите пароль" aria-label="Пароль" aria-describedby="password2-addon">
-                      <button class="btn btn-outline-secondary" type="button" id="show-password2">Показать</button>
-                    </div>
-                  </div>
-                  <div class="modal-footer">
-                    <button type="button" id="btn-reg" class="btn btn-main btn-danger" data-bs-target="#registration">
-                          Зарегистрироваться
-                    </button>
-                  </div>
+                  </form>
               </div>
               </div>
             </div>
@@ -348,8 +358,7 @@
             <div class="slaider-title text-center">
                 <span class="text-slider_title">Pinzeria by Bontempi — семейный ресторан авторской итальянской кухни в Воронеже</span>
             </div>
-
-          
+         
  
           <!-- Блоки -->
           <div class="row  d-flex align-items-center justify-content-center">
