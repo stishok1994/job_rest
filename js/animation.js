@@ -15,23 +15,6 @@
 
   observerBtnBoard.observe(animatedBtnBoard);
 
-
-  // <!-- script for anymation top bottom board -->
-
-  const animatedTopBoard = document.querySelector('.board-top');
-
-  const observerTopBoard = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        animatedTopBoard.classList.add('rotate-vert-center');
-      } else {
-        animatedTopBoard.classList.remove('rotate-vert-center');
-      }
-    });
-  });
-  observerTopBoard.observe(animatedTopBoard);
-
-
   //   <!-- script for anymation pepper -->
 
   const animatedPepper = document.querySelector('.slider-right_img1');

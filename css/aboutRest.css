@@ -31,7 +31,8 @@
 }
 .linkToPage a {
     text-decoration: none;
-    font-family: "Merriweather", serif;
+    /* font-family: "Merriweather", serif; */
+    font-family: "Playfair Display", serif;
     font-size: 22px;
     font-weight: 400;
     color: rgb(251, 100, 100);
@@ -45,7 +46,8 @@
     z-index: 1;
 }
 .about-title h2 {
-    font-family: "Merriweather", serif;
+    /* font-family: "Merriweather", serif; */
+    font-family: "Playfair Display", serif;
 }
 .container {
     padding: 0 5px;
