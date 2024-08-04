@@ -649,7 +649,7 @@ body {
         padding: 16px 0;
         max-width: 100%;
       }
-
+      
       .header-bottom {
         z-index: 10;
       }
@@ -679,7 +679,11 @@ body {
     }
 
     /*  */
-    
+    .valentino-nav {
+        height: 1.4em; 
+        width: auto; 
+        margin-right: 5px;
+      }
 
 
 /* Для различной ширины и высоты экрана */
