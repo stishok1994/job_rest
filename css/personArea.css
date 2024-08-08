@@ -1,10 +1,12 @@
 .log-out_block {
+    text-decoration: none;
     display: flex;
     justify-content: end;
     margin-right: 20px;
 }
 #log-out_text {
-    font-size: 14px;
+    font-size: 22px;
+    width: 300;
     color: rgb(251, 100, 100);
     text-decoration: underline;
 }

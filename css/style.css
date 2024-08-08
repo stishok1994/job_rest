@@ -388,7 +388,7 @@ body {
             background-color: rgba(0, 0, 0, 0.8);
           }
           
-          .modal-content {
+          .modal-content-slaider {
             display: block;
             margin: 15% auto;
             max-width: 60%;
@@ -666,6 +666,7 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     gap: 5px;
+    width: 100%;
  }
  .logo-card {
     display: flex;
@@ -773,9 +774,9 @@ body {
             max-width: 100px;
             height: auto;
         }
-        .head-btm_deliv_aboutrest {
+        /* .head-btm_deliv_aboutrest {
             margin-left: 20px;
-        }
+        } */
         .btn-header_btn {
             font-size: 13px;
             font-weight: 200;
@@ -795,9 +796,9 @@ body {
                 max-width: 130px;
                 height: auto;
             }
-            .head-btm_deliv_aboutrest {
+            /* .head-btm_deliv_aboutrest {
                 margin-left: 28px;
-            }
+            } */
             .btn-header_btn {
                 font-size: 13px;
                 padding: 10px 0;
@@ -883,9 +884,9 @@ body {
             max-width: 170px;
             height: auto;
         }
-        .head-btm_deliv_aboutrest {
+        /* .head-btm_deliv_aboutrest {
             margin-left: 45px;
-        }
+        } */
         .btn-header_btn {
             font-size: 15px;
             font-weight: 300;
@@ -915,9 +916,9 @@ body {
             font-size: 40px;
             width: 500;
          }
-         .head-btm_deliv_aboutrest {
+         /* .head-btm_deliv_aboutrest {
             margin-left: 55px;
-        }
+        } */
         .btn-header_btn {
             font-size: 16px;
             padding: 13px 0;
@@ -972,7 +973,7 @@ body {
       /* 1200 */
       @media (min-width: 1200px) {
         .navbar-text {
-            font-size: 30px;
+            font-size: 26px;
             font-weight: bold;
             font-weight: 500;
         }
@@ -992,7 +993,7 @@ body {
             width: 700;
         }
         .head-btm_deliv_aboutrest {
-            margin-left: 200px;
+            margin-right: 0px;
         }
         .btn-header_btn {
             font-size: 22px;
@@ -1031,6 +1032,9 @@ body {
         }
         .text-body-secondary {
             font-size: 20px;
+        }
+        .valentino-link {
+            margin-right: auto;
         }
       }
 
