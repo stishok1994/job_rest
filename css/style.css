@@ -1,7 +1,4 @@
-/* html, body {
-  width: 100%;
-  height: 100%;
-} */
+
 
 .container {
     max-width: 1400px;
@@ -51,6 +48,23 @@ body {
 }
  /* /video */
 
+ /* reservation table */
+ .personal-info_modal {
+    font-size: 13px;
+}
+.personal-info_modal h2 {
+    font-size: 15px;
+}
+.btn-modal-res-tabl {
+    background-color: rgba(254, 64, 48, 0.95);
+    border: none;
+}
+.btn-modal-res-tabl:hover {
+    background-color: #f72f1d; /* Цвет фона при наведении */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Тень при наведении */
+    transform: translateY(-2px); /* Смещение вверх при наведении */
+}
+ 
 /* овощи*/
 .left-top-img {
     position: absolute;
@@ -184,6 +198,10 @@ body {
     width: 70px;
     height: auto;
 }
+.btm-pers-area:hover {
+    cursor: pointer;
+}
+.btm-pers-area
 .btn-header_bottom {
     width: 150px;
     font-size: 14px;
@@ -689,8 +707,6 @@ body {
 
 /* Для различной ширины и высоты экрана */
 
-      /* Style for font size */
-
     /* 350-767 px */
       @media (min-width: 350px) and (max-width:767px) {
         .img-Logo_narrow {
@@ -774,9 +790,18 @@ body {
             max-width: 100px;
             height: auto;
         }
-        /* .head-btm_deliv_aboutrest {
-            margin-left: 20px;
-        } */
+         /* reservation table */
+        .personal-info_modal {
+            font-size: 13px;
+        }
+        .personal-info_modal h2 {
+            font-size: 15px;
+        }
+        .btn-modal-res-tabl {
+            font-size: 13px;
+            padding: 5px 10px;
+        }
+        
         .btn-header_btn {
             font-size: 13px;
             font-weight: 200;
@@ -884,9 +909,13 @@ body {
             max-width: 170px;
             height: auto;
         }
-        /* .head-btm_deliv_aboutrest {
-            margin-left: 45px;
-        } */
+         /* reservation table */
+         .personal-info_modal {
+            font-size: 15px;
+        }
+        .personal-info_modal h2 {
+            font-size: 17px;
+        }
         .btn-header_btn {
             font-size: 15px;
             font-weight: 300;
@@ -1002,8 +1031,9 @@ body {
             border-radius: 30px;
         }
         .slider-btm-text {
-            font-size: 16px;
+            font-size: 17px;
             text-align: center;
+            width: 300;
         }
         .card-block {
             padding-left: 50px;
@@ -1035,6 +1065,14 @@ body {
         }
         .valentino-link {
             margin-right: auto;
+        }
+        /* reserv table */
+        .btn-modal-res-tabl {
+            font-size: 16px;
+            padding: 5px 10px;
+        }
+        .personal-info_modal {
+            font-size: 20px;
         }
       }
 

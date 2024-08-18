@@ -1,18 +1,18 @@
   // Script for Abaut Rest
 // <!-- grass -->
-const animatedGrass = document.querySelector('.img-spar');
+// const animatedGrass = document.querySelector('.img-spar');
 
-const observerGrass = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      animatedGrass.classList.add('rotate-scale-down');
-    } else {
-      animatedGrass.classList.remove('rotate-scale-down');
-    }
-  });
-});
+// const observerGrass = new IntersectionObserver((entries) => {
+//   entries.forEach((entry) => {
+//     if (entry.isIntersecting) {
+//       animatedGrass.classList.add('rotate-scale-down');
+//     } else {
+//       animatedGrass.classList.remove('rotate-scale-down');
+//     }
+//   });
+// });
 
-observerGrass.observe(animatedGrass);
+// observerGrass.observe(animatedGrass);
 
 // plates
 const animatedPlates = document.querySelectorAll('.plates');

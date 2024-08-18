@@ -1,14 +1,11 @@
 // request authorization registration
 
 const AuthURL = 'https://pinzeria.tw1.ru/auth/login/'
-const RegURL = 'https://pinzeria.tw1.ru/auth/register/'
+const RegURL =  'https://pinzeria.tw1.ru/auth/register/'
 
 
 // Проверяем авторизацию
 document.addEventListener('DOMContentLoaded', ViewHideAccount());
-
-// Регистрация
-// document.getElementById('btn-reg').addEventListener('click', handleReg);
 
  // Валидация и авторизация
 document.addEventListener('DOMContentLoaded', () => {
@@ -44,8 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // console.log('test123')
         // Авторизация
         handleLogin()
-        
-        // document.getElementById('btn-input_id').addEventListener('click', handleLogin);
+
         }
     });
   });
@@ -164,7 +160,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-
 //   функция закрытия модульного окна авторизации
 function hideModal () {
     const modal = document.getElementById('inp-reg');
@@ -198,12 +193,9 @@ async function handleLogin () {
         };
         // console.log('Запрос:', userData);
 
-        const token = await login(userData)
-        saveToken(token)
+        const data = await login(userData)
+        saveData(data)
         ViewHideAccount ();
-        // console.log('Токен:', localStorage.getItem('authToken'));
-        // закрытие модульного окна
-        // hideModal ()
     }
     catch (error) {
         // alert('Error')
@@ -254,7 +246,7 @@ async function login (userData) {
                 const data = await responce.json();
                 // закрытие модульного окна
                 hideModal ()
-                return data.access_token // get token
+                return data // get token
             }
             else {
                 throw new Error('Проверьте правильность ввода логина и пароля');
@@ -265,9 +257,17 @@ async function login (userData) {
     }
         };
 
-// save token
-function saveToken (token) {
-    localStorage.setItem('authToken', token);
+// save token for Aut
+function saveData (data, userName, firstName) {
+    localStorage.setItem('authToken', data.access_token);
+    localStorage.setItem('firstName', data.first_name);
+    localStorage.setItem('phone', data.username);
+}
+// save token for Registration
+function saveDataReg (data, userName, firstName) {
+    localStorage.setItem('authToken', data.access_token);
+    localStorage.setItem('firstName', firstName);
+    localStorage.setItem('phone', userName);
 }
 
 // Регистрация
@@ -290,21 +290,20 @@ async function handleReg () {
             date_birth: dateBirth
         };
 
+
         // console.log('Запрос:', userData);
-        const token = await RegIn(userData)
-        saveToken(token)
+        const data = await RegIn(userData)
+        saveDataReg(data, userName, firstName)
         ViewHideAccount ()
         // console.log('Токен:', localStorage.getItem('authToken'));  
         
     }
     catch (error) {
-        // alert('Error')
         // console.error(error);
         alert(error);
         
       }
 }
-
 
 async function RegIn (userData) {
     try {
@@ -320,7 +319,8 @@ async function RegIn (userData) {
                 const data = await responce.json();
                 // закрытие модульного окна регистрации
                 hideModalReg ()
-                return data.access_token // get token
+                console.log(userData)
+                return data // get token
             }
             else {
                 throw new Error('Пользователь с таким телефоном уже зарегистрирован');

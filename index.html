@@ -8,9 +8,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
-
-    <link href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&family=Great+Vibes&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Pacifico&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&family=Great+Vibes&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Pacifico&family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
 
     <!-- Bootstrap -->
@@ -89,10 +86,15 @@
                                         
                                         <li class="nav-item d-flex justify-content-start">
                                           <div class="nav-btn btm-reserv-table-nav">
+                                            <button type="button" class="btn btn-main btn-danger btn-header_top btn-reserv-table" data-bs-toggle="modal" data-bs-target="#reserv-table">
+                                                Забронировать столик
+                                            </button>
+                                        </div>
+                                          <!-- <div class="nav-btn btm-reserv-table-nav">
                                               <button type="button " class="btn btn-main btn-width_100 btn-danger" data-bs-toggle="modal" data-bs-target="#reserv-table">
                                                   Забронировать столик
                                               </button>
-                                          </div>
+                                          </div> -->
                                         </li>
                                         <li class="nav-item d-flex justify-content-start">
                                           <div id="logIn-action_2" class="btm-in-reg-nav nav-btn view-hide mt-3">
@@ -121,7 +123,7 @@
                                   <div class="reserv-in d-flex">
                                     <!-- бронь -->
                                     <div class="btm-reserv-table me-2">
-                                        <button type="button" class="btn btn-main btn-danger btn-header_top" data-bs-toggle="modal"        data-bs-target="#reserv-table">
+                                        <button type="button" class="btn btn-main btn-danger btn-header_top btn-reserv-table" data-bs-toggle="modal" data-bs-target="#reserv-table">
                                             Забронировать столик
                                         </button>
                                     </div>
@@ -237,15 +239,18 @@
                 <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel">Заголовок модального окна</h1>
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Бронирование стола</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
                     </div>
                     <div class="modal-body">
-                    ...
+                      <div class="personal-info_modal">
+                        <p><span id="user-name_modal"></span></p>
+                        <p><span id="user-phone_modal"></span></p>
+                      </div>
                     </div>
                     <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
-                    <button type="button" class="btn btn-primary">Сохранить изменения</button>
+                    <button type="button" class="btn btn-secondary btn-modal-res-tabl" data-bs-dismiss="modal">Закрыть</button>
+                    <button type="button" class="btn btn-primary btn-modal-res-tabl">Отправить запрос</button>
                     </div>
                 </div>
                 </div>
@@ -370,7 +375,7 @@
             <div class="slider-left col-md-2">
               <div class="slider-left_center_content">
                 <div class="slider-left_text">
-                  <p>Это приятное место, которое завораживает своей домашней приятной атмосферой, удивительными блюдами и вкусами.</p>
+                  <p>Атмосфера ресторана окутает Вас своим теплом и уютом, а кухня покорит разнообразием блюд и богатством вкусов</p>
                 </div>
                 <div class="row">
                   <img class="slider-left_img_pizza rotate-hor-center " src="/img/slider/pinzaapng.png" alt="">
@@ -424,7 +429,7 @@
               
               <!-- /карусель -->
               <div class="slider-btm-text">
-                Ресторан с удовольствием посещают компании друзей, здесь можно провести приятный вечер с родными и коллегами. В ресторан с удовольствием приходят и дети.
+                Мы ценим Ваше время проведенное у нас, и с  любовью продумываем все до мелочей <br> Насладитесь совместным времяпрепровождением, об остальном мы позаботимся за вас.
               </div>
             </div>
             <!-- правый блок -->
@@ -439,7 +444,7 @@
                 </div>
               </div>
               <div class="btm-reserv-table-nav mt-3">
-                <button type="button " class="btn btn-main btn-danger btn-right-blok" data-bs-toggle="modal" data-bs-target="#reserv-table">
+                <button type="button " class="btn btn-main btn-danger btn-right-blok btn-reserv-table" data-bs-toggle="modal" data-bs-target="#reserv-table">
                     Забронировать столик
                 </button>
             </div>
@@ -727,6 +732,8 @@
      <script src="/js/cartNum.js"></script>
     <!-- События -->
      <script src="/js/event.js"></script>
+     <!-- Бронь стола -->
+      <script src="/js/reservationTable.js"></script>
 
 
 </body>

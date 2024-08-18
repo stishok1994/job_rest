@@ -9,10 +9,13 @@
 }
 .linkToPage a {
     text-decoration: none;
-    /* font-family: "Merriweather", serif; */
-    font-family: "Playfair Display", serif;
+    /* font-family: "Playfair Display", serif;
     font-size: 22px;
-    font-weight: 400;
+    font-weight: 400; */
+    font-family: "Philosopher", serif;
+    font-style: normal;
+    font-size: 32px;
+    font-weight: 300;
     color: rgb(251, 100, 100);
 }
 .bi {
@@ -151,7 +154,7 @@
     }
 
     .items {
-        background: #ebcca9;
+        /* background: #ebcca9; */
         border-radius: 8px;
         width: 120px;
         display: flex;
@@ -389,6 +392,9 @@
             font-weight: 300;
             padding: 10;
         }
+        #add_Cart {
+            font-size: 12px;
+        }
     }
 
     @media (min-width: 992px) {
@@ -418,6 +424,9 @@
             font-size: 12px;
             font-weight: 300;
             padding: 10;
+        }
+        #add_Cart {
+            font-size: 13px;
         }
     }
     /* 1200px */
@@ -458,6 +467,8 @@
             font-weight: 300;
             padding: 10;
         }
-    
+        #add_Cart {
+            font-size: 13px;
+        }
         
     }

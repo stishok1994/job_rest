@@ -1,3 +1,14 @@
+body {
+    /* font-family: "Merriweather", serif; */
+    font-family: "Philosopher", serif;
+    font-style: normal;
+    font-size: 32px;
+    font-weight: 300;
+}
+.my-container {
+    margin: 0 7px 0 15px;
+}
+/* кнопка выхода */
 .log-out_block {
     text-decoration: none;
     display: flex;
@@ -5,7 +16,7 @@
     margin-right: 20px;
 }
 #log-out_text {
-    font-size: 22px;
+    font-size: 16px;
     width: 300;
     color: rgb(251, 100, 100);
     text-decoration: underline;
@@ -13,3 +24,269 @@
 #log-out_text:hover {
     cursor: pointer;
 }
+.delete-adress {
+    margin-left: 10px;
+}
+.delete-adress:hover {
+    cursor: pointer;
+}
+/* личные данные */
+#user-name, 
+#user-phone,
+#user-bonus {
+    font-weight: bold;
+}
+.log-out_btn,
+.log-out_block a {
+    text-decoration: none;
+}
+#log-out_btn {
+    font-size: 16px;
+    width: auto;
+    padding: 5px 10px;
+}
+/* адрес доставки */
+.adressDelivery h2{
+    font-size: 16px;
+    font-weight: bold;
+}
+.adress-contetnt h2 {
+    font-weight: 300;
+}
+.adress-contetnt {
+    font-size: 16px;
+}
+.adress-contetnt input.adress-block-text {
+    margin-bottom: 10px;
+    padding: 2px 0;
+  }
+  /* Выбрать адрес */
+.btn-select-adderess {
+    font-size: 22px;
+    width: 300;
+}
+/* выбранный адрес */
+.coordinates {
+    font-size: 22px;
+    width: 300;
+}
+.delivery-costs {
+    font-size: 22px;
+    width: 300;
+}
+/* map */
+#map {
+    width: 600px; 
+    height: 400px;
+}
+
+
+/* Для различной ширины и высоты экрана */
+
+      /* 350 */
+    @media (min-width: 350px) {
+                /* личные данные */
+                .personal-info h2{
+                    font-size: 13px;
+                    font-weight: bold;
+                }
+                .personal-info{
+                    font-size: 13px;
+                }        
+                /* адрес доставки */
+                .adressDelivery h2,
+                .coordinates h2{
+                    font-size: 13px;
+                    font-weight: bold;
+                }
+                .adress-contetnt h2 {
+                    font-weight: 300;
+                }
+                .adress-contetnt {
+                    font-size: 13px;
+                }
+                /* выбрать */
+                .btn-select-adderess {
+                    font-size: 13px;
+                    width: auto;
+                    padding: 2px 3px;
+                }
+                .coordinates {
+                    font-size: 13px;
+                    width: 300;
+                }
+                .delivery-costs {
+                    font-size: 13px;
+                    width: 300;
+                }
+                /* delete address btn */
+                .delete-adress {
+                    font-size: 13px;
+                    margin-left: 3px;
+                }
+                /* Log out */
+                #log-out_btn {
+                    font-size: 12px;
+                    width: auto;
+                    padding: 5px 5px;
+                }
+                /* map */
+                #map {
+                    width: 250px; 
+                    height: 150px;
+                }
+    }
+    /* 768 */
+    @media (min-width: 768px) {
+        /* личные данные */
+        .personal-info h2{
+            font-size: 16px;
+            font-weight: bold;
+        }
+        .personal-info{
+            font-size: 16px;
+        }        
+        /* адрес доставки */
+        .adressDelivery h2,
+        .coordinates h2{
+            font-size: 16px;
+            font-weight: bold;
+        }
+        .adress-contetnt h2 {
+            font-weight: 300;
+        }
+        .adress-contetnt {
+            font-size: 16px;
+        }
+        /* выбрать */
+        .btn-select-adderess {
+            font-size: 14px;
+            width: auto;
+            padding: 3px 5px;
+        }
+        .coordinates {
+            font-size: 16px;
+            width: 300;
+        }
+        .delivery-costs {
+            font-size: 16px;
+            width: 300;
+        }
+        /* delete address btn */
+        .delete-adress {
+            font-size: 16px;
+            margin-left: 5px;
+        }
+        /* Log out */
+        #log-out_btn {
+            font-size: 14px;
+            width: auto;
+            padding: 5px 10px;
+        }
+        /* map */
+        #map {
+            width: 400px; 
+            height: 200px;
+        }
+    }
+    /* 992 */
+    @media (min-width: 992px) {
+        /* личные данные */
+        .personal-info h2{
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .personal-info{
+            font-size: 18px;
+        }        
+        /* адрес доставки */
+        .adressDelivery h2,
+        .coordinates h2{
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .adress-contetnt h2 {
+            font-weight: 300;
+        }
+        .adress-contetnt {
+            font-size: 18px;
+        }
+        /* выбрать */
+        .btn-select-adderess {
+            font-size: 16px;
+            width: auto;
+            padding: 3px 5px;
+        }
+        .coordinates {
+            font-size: 18px;
+            width: 300;
+        }
+        .delivery-costs {
+            font-size: 18px;
+            width: 300;
+        }
+        /* delete address btn */
+        .delete-adress {
+            font-size: 18px;
+            margin-left: 5px;
+        }
+        /* Log out */
+        #log-out_btn {
+            font-size: 15px;
+            width: auto;
+            padding: 5px 10px;
+        }
+        #map {
+            width: 600px; 
+            height: 400px;
+        }
+    }
+    /* 1200 */
+    @media (min-width: 1200px) {
+        /* личные данные */
+        .personal-info h2{
+            font-size: 22px;
+            font-weight: bold;
+        }
+        .personal-info{
+            font-size: 22px;
+        }
+
+        #log-out_btn {
+            font-size: 18px;
+            width: auto;
+            padding: 5px 10px;
+        }
+        /* адрес доставки */
+        .adressDelivery h2,
+        .coordinates h2{
+            font-size: 22px;
+            font-weight: bold;
+        }
+        .adress-contetnt h2 {
+            font-weight: 300;
+        }
+        .adress-contetnt {
+            font-size: 20px;
+        }
+        /* выбрать */
+        .btn-select-adderess {
+            font-size: 20px;
+            width: auto;
+            padding: 3px 5px;
+        }
+        .coordinates {
+            font-size: 22px;
+            width: 300;
+        }
+        .delivery-costs {
+            font-size: 22px;
+            width: 300;
+        }
+        #map {
+            width: 600px; 
+            height: 400px;
+        }
+    }
+
+    

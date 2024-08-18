@@ -1,7 +1,4 @@
 // Получаем категории для страницы Меню и отрисовываем содержимое категории
-
-
-// const UrlMenuCat = 'http://147.45.109.158:8881/api/category'
 const UrlMenuCat = 'https://pinzeria.tw1.ru/api/category'
 
 
@@ -13,14 +10,6 @@ async function fetchData (url) {
     catch (error) {
         console.error('Error: ', error)
     }
-
-    // return fetch(url)
-    // .then (response => {
-    //     if (!response.ok) {
-    //         throw new Error(`HTTP error ${response.status}`);        
-    //     }
-    //     return response.json();
-    // })
 }
 
 document.addEventListener('DOMContentLoaded', function() {
