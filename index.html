@@ -235,7 +235,7 @@
             
             <!-- Модальное окно -->
             <!-- reser-table -->
-            <div class="modal fade" id="reserv-table" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <!-- <div class="modal fade" id="reserv-table" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -254,7 +254,31 @@
                     </div>
                 </div>
                 </div>
+            </div> -->
+            <div class="modal fade" id="reserv-table" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Бронирование стола</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+                  </div>
+                  <div class="modal-body">
+                    <div class="personal-info_modal">
+                      <label for="user-name_modal">Имя:</label>
+                      <input type="text" id="user-name_modal" class="form-control" placeholder="Введите ваше имя">
+                      
+                      <label for="user-phone_modal">Телефон:</label>
+                      <input type="text" id="user-phone_modal" class="form-control" placeholder="Введите ваш телефон">
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary btn-modal-res-tabl" data-bs-dismiss="modal">Закрыть</button>
+                    <button type="button" class="btn btn-primary btn-modal-res-tabl">Отправить запрос</button>
+                  </div>
+                </div>
+              </div>
             </div>
+            
             <!-- Registration/input -->
             <div class="modal fade" id="inp-reg" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
