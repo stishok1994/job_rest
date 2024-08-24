@@ -431,7 +431,15 @@ body {
 
 
 
-    
+    /* logo */
+    .logo-on-header {
+        max-width: 190px; 
+        height: auto;
+    }
+    .logo-on-header_narrow {
+        max-width: 190px; 
+        height: auto;
+    }
     /* Меню*/
         .menu-title {
             display: flex;
@@ -682,7 +690,7 @@ body {
  .menu-header {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: end;
     gap: 5px;
     width: 100%;
  }
@@ -759,7 +767,7 @@ body {
         }
         .btn-header_top
          {
-            width: 170px;
+            width: 135px;
         }
         .navbar-cont {
             padding-top: 10px;
@@ -809,6 +817,17 @@ body {
             width: 160px;
             border-radius: 30px;
         }
+        .cardItem {
+            padding: 10px 10px;
+        }
+        .cardLogo {
+            text-align: center;
+            padding-right: 5px;
+        }
+        .logo-on-header_narrow {
+            max-width: 110px; 
+            height: auto;
+        }
       }
 
         /* 576px */
@@ -835,6 +854,16 @@ body {
             }
             .right-btm-img {
                 max-width: 100px;
+            }
+            .cardItem {
+                padding: 10px 15px;
+            }
+            .cardLogo {
+                padding-right: 15px;
+            }
+            .logo-on-header_narrow {
+                max-width: 190px; 
+                height: auto;
             }
         }
 
@@ -1057,14 +1086,17 @@ body {
             font-size: 16px;
             font-weight: 300;
         }
+        .btm-pers-area
+         {
+            font-size: 22px;
+            font-weight: 300;
+            padding: 7px 5px;
+        }
         .btn-header_top {
             width: 200px;
         }
         .text-body-secondary {
             font-size: 20px;
-        }
-        .valentino-link {
-            margin-right: auto;
         }
         /* reserv table */
         .btn-modal-res-tabl {
@@ -1076,6 +1108,10 @@ body {
         }
       }
 
+        /* 1400 */
+        @media (min-width: 1400px) {
+
+        }
     /* Стили для экранов шириной 768px и менее */
 @media (max-width: 768px) {
     .nav-btn {
