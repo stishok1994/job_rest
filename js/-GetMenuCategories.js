@@ -1,5 +1,5 @@
 // Получаем категории для меню на главной странице
-// const myUrl = 'http://147.45.109.158:8881/api/category'
+
 const myUrl = 'https://pinzeria.tw1.ru/api/category'
 
 async function fetchData (url) {

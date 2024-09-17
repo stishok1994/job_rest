@@ -1,3 +1,8 @@
+body {
+    font-family: "Poiret One", sans-serif;
+    font-weight: bold;
+    /* font-style: normal; */
+}
 .container {
     overflow: hidden; 
 }
@@ -9,18 +14,21 @@
 }
 .linkToPage a {
     text-decoration: none;
-    /* font-family: "Playfair Display", serif;
-    font-size: 22px;
-    font-weight: 400; */
-    font-family: "Philosopher", serif;
+    font-family: "Poiret One", sans-serif;
+    font-weight: bold;
     font-style: normal;
     font-size: 32px;
-    font-weight: 300;
     color: rgb(251, 100, 100);
 }
 .bi {
     font-size: 20px;
 }
+.navbar-text,
+        .adr-phone,
+        .priceItem,
+        .phone-header {
+            font-weight: bold !important;
+        }
 
 /* Левый овощь */
     .left-top-img {
@@ -54,7 +62,7 @@
     .menu_block button {
         text-decoration: none;
         color: #080808;
-        padding: 0px 5px 0;
+        padding: 5px 10px;
         background-color: transparent;
         border: none;
     }
@@ -106,6 +114,7 @@
         right: 0;
         z-index: -1;
     }
+        
 
     /* Карточка */
     /* Для карточки */
@@ -134,6 +143,7 @@
         font-size: 14px;
         font-weight: 400;
         margin-right: 10px;
+        font-weight: bold;
     }
     .nameTitleKBU {
         display: flex;
@@ -229,10 +239,11 @@
         color: #2b2d2f;
     }
     .descript_text {
-        font-size: 10px;
+        font-size: 13px;
         font-weight: 700;
-        color: #646363;
+        color: #292828 !important;
         padding: 0 10px;
+        font-weight: bold;
     }
 
     .card-body {
@@ -242,7 +253,7 @@
         margin-bottom: 5px;
     }
 
-      .btn {
+      #add_Cart {
         color: #FFF;
       }
     .btn .btn-block .btn-outline-warning .btn-color {
@@ -265,16 +276,41 @@
     }
     
 
+    /* Модальное окно / modal */
+        /* Прозрачный фон для модального окна */
+    .modal-backdrop.show {
+        opacity: 0; /* Убираем затемнение фона */
+    }
+
+    /* Стили для модального контента */
+    .modal-content-menu {
+        background-color: transparent !important; /* Прозрачный фон модального окна */
+        border: none; /* Убираем границы модального окна */
+        box-shadow: none; /* Убираем тени */
+    }
+
+    /* Картинка внутри модального окна */
+    .modal-body img {
+        max-width: 70%; /* Изображение занимает максимум доступной ширины */
+        height: auto;    /* Автоматическая высота изображения */
+    }
+
+        /* обводка категории */
+        .frame_item{
+            border-radius: 30px;
+            line-height: 1;
+            background-color: #fe4030fb !important;
+            padding: 5px 10px !important;
+        }
+
 
     /* Для различной ширины экрана */
     @media (min-width: 300px) {
         .menu_block h1 {
             font-size: 30px;
-            font-weight: 400;
         }
         .menu-item_btn {
             font-size: 18px;
-            font-weight: 400;
         }
         .nameSubMenu h4 {
             font-size: 26px;
@@ -303,7 +339,7 @@
             margin-bottom: 0;
         }
         .item-title {
-            font-size: 12px;
+            font-size: 14px;
             font-weight: bold;
         }
         .card-product {
@@ -342,7 +378,8 @@
             padding: 0 15px;
         }
         .descript_text {
-            font-size: 11px;
+            font-size: 18px;
+            font-weight: bold;
         }
         .price__currency {
             font-size: 16px;
@@ -370,7 +407,7 @@
             padding: 10;
         }
         .item-title {
-            font-size: 13px;
+            font-size: 16px;
             font-weight: bold;
         }
         .card-product {
@@ -403,7 +440,7 @@
             padding-right: 5px;
         }
         .item-title {
-            font-size: 14px;
+            font-size: 18px;
             font-weight: bold;
         }
         .card-product {
@@ -432,19 +469,21 @@
     /* 1200px */
     @media (min-width: 1200px) {
         .item-title {
-            font-size: 16px;
+            font-size: 22px;
             font-weight: bold;
         }
         .menu_block h1 {
             font-size: 36px;
-            font-weight: 500;
+            /* font-weight: 500; */
+            font-weight: bold;
         }
         .nameSubMenu h4 {
             font-size: 36px;
         }
         .menu-item_btn {
             font-size: 24px;
-            font-weight: 500;
+            /* font-weight: 500; */
+            font-weight: bold;
             gap: 25px;
         }
         .price__currency {

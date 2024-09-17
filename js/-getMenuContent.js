@@ -17,7 +17,6 @@ nameSubMenu.querySelector('h4').innerText = title;
 //  отрисовываем меню по категориям
 
     // Получаем ссылку на категорию
-    // const myUrl = `http://147.45.109.158:8881/api/category?category=${title}`
     const myUrl = `https://pinzeria.tw1.ru/api/category?category=${title}`
 
     // создаем функцию запроса

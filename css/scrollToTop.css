@@ -17,4 +17,16 @@
   #scrollToTopBtn.show {
     display: block;
   }
-  
+  /* 350 */
+  @media (min-width: 350px) {
+    #scrollToTopBtn {
+      padding: 10px 10px;
+    }
+  }
+
+  /* 1200 */
+  @media (min-width: 1200px) {
+    #scrollToTopBtn {
+      padding: 20px 18px;
+    }
+  }

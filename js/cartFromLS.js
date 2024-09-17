@@ -6,14 +6,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     cart.forEach(item => {
         const cartItemDiv = 
-        `<div class="cart-element row flip-in-hor-bottom" data-id="${item.id}">
-            <div class="col-2 d-flex justify-content-center align-items-center">
+        `<div class="row cart-element flip-in-hor-bottom" data-id="${item.id}">
+            <div class="col-3 col-md-2 d-flex justify-content-center align-items-center">
                 <img class="img-cart" src="${item.imgSrc}" alt="">
             </div>
-            <div class="cart-name-title col-6 d-flex justify-content-start align-items-center">
+            <div class="cart-name-title col-9 col-md-6 d-flex justify-content-start align-items-center">
                 <span class="name-prod-cart">${item.title}</span>
             </div>
-            <div class="itemForPrice col-4 d-flex justify-content-start align-items-center">
+            <div class="itemForPrice col-md-4 d-flex">
                 <div class="action-counter_cart d-flex f-row">
                     <div class="items-action_cart" data-action="minus">-</div>
                     <div class="items-current_cart" data-counter>${item.counter}</div>

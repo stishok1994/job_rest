@@ -1,8 +1,15 @@
+body {
+    font-family: "Poiret One", sans-serif;
+    font-weight: bold;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
 .left-top-img {
     position: absolute;
     left: 5px;
     top: 0px;
-    z-index: 0;
+    z-index: -5;
     max-width: 250px;
 }
 .right-top-img {
@@ -31,10 +38,11 @@
 }
 .linkToPage a {
     text-decoration: none;
-    /* font-family: "Merriweather", serif; */
-    font-family: "Playfair Display", serif;
+    /* font-family: "Playfair Display", serif; */
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
     font-size: 22px;
-    font-weight: 400;
     color: rgba(254,64,48,0.95);
 }
 
@@ -46,8 +54,10 @@
     z-index: 1;
 }
 .about-title h2 {
-    /* font-family: "Merriweather", serif; */
-    font-family: "Playfair Display", serif;
+    /* font-family: "Playfair Display", serif; */
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
 }
 .container {
     padding: 0 5px;
@@ -72,17 +82,17 @@
 }
 .top-block-text1 {
     font-size: 17px;
-    font-weight: 400;
+    font-weight: bold;
     }
 
 .top-block-text2 {
     font-size: 15px;
-    font-weight: 300;
+    font-weight: bold;
 }
 .second-block_left_text h2,
 .btm-block-text_top {
     font-size: 24px;
-    font-weight: 400;
+    font-weight: bold;
 }
 
 .second-block_left_text,
@@ -98,7 +108,7 @@
 .btm-block-text_average,
 .btm-block-text_btm {
     font-size: 17px;
-    font-weight: 300;
+    font-weight: bold;
 }
 .img-second-block_pizza {
     border-top-right-radius: 100px;
@@ -133,7 +143,24 @@
     max-width: 80%;
     min-height: auto;
 }
-
+/* для модального окна */
+#modal-slaider {
+    background-image: none;
+    background-color: transparent;
+    border: none;
+}
+.modal-header {
+    border-bottom: none;
+}
+.modal-dop-img {
+    background-image: none;
+    background-color: transparent;
+    border: none;
+    width: 100%; 
+    height: auto;  
+    margin: 0 auto; 
+}
+ 
 
 
 /* отступы */
@@ -145,6 +172,17 @@
     padding-right: 30px;
     padding-left: 30px;
 }
+
+
+/* анимация для картинок мероприятий */
+.rotate-image {
+    transition: transform 2s;
+  }
+  
+  .rotate-image:hover {
+    transform: rotateY(360deg);
+  }
+  
 
 
 
@@ -162,11 +200,11 @@
       /* 350 */
       @media (min-width: 350px) {
         .about-title {
-            margin: 40px 0 30px 0;
+            margin: 20px 0 20px 0;
         }
         .about-title h2 {
             font-size: 24px;
-            font-weight: 300;
+            font-weight: bold;
         }
         .left-top-img {
             max-width: 150px;
@@ -176,24 +214,24 @@
         }
         .top-block-text1 {
             font-size: 18px;
-            font-weight: 400;
+            font-weight: bold;
             margin-top: 1rem;
             }
         .top-block-text2 {
             font-size: 13px;
-            font-weight: 300;
+            /* font-weight: 300; */
             }
         .second-block_left_text h2,
         .btm-block-text_top {
             font-size: 18px;
-            font-weight: 400;
+            /* font-weight: 400; */
         }
         .second-block_left_text p,
         .second_block_text-btm,
         .btm-block-text_average,
         .btm-block-text_btm {
             font-size: 14px;
-            font-weight: 300;
+            /* font-weight: 300; */
         }
 
         .img-spar {
@@ -232,7 +270,7 @@
       @media (min-width: 768px) {
         .about-title h2 {
             font-size: 28px;
-            font-weight: 400;
+            /* font-weight: 400; */
         }
         .left-top-img {
             max-width: 180px;
@@ -245,7 +283,7 @@
         .btm-block-text_average,
         .btm-block-text_btm {
             font-size: 15px;
-            font-weight: 300;
+            /* font-weight: 300; */
         }
         .img-spar {
             max-width: 170px;
@@ -270,25 +308,25 @@
       @media (min-width: 992px) {
         .top-block-text1 {
             font-size: 24px;
-            font-weight: 400;
+            /* font-weight: 400; */
             margin-top: 0;
             }
         
         .top-block-text2 {
             font-size: 15px;
-            font-weight: 300;
+            /* font-weight: 300; */
         }
         .second-block_left_text h2,
         .btm-block-text_top {
             font-size: 24px;
-            font-weight: 400;
+            /* font-weight: 400; */
         }
         .second-block_left_text p,
         .second_block_text-btm,
         .btm-block-text_average,
         .btm-block-text_btm {
             font-size: 15px;
-            font-weight: 300;
+            /* font-weight: 300; */
         }
         .second-block_left_text {
             margin-top: 0;
@@ -336,10 +374,23 @@
       @media (min-width: 1200px) {
         .about-title h2 {
             font-size: 36px;
-            font-weight: 400;
+            /* font-weight: 400; */
         }
         .img-spar {
             max-width: 200px;
             height: auto;
         }
-      }
+        
+        /* Настройка модального окна */
+        .img-modal_dop {
+            width: 90%; 
+            height: auto;  
+        }
+        .modal-dop-img {
+            width: 100%; 
+            height: auto;  
+            margin: 0 auto; 
+        }
+        }
+        
+        

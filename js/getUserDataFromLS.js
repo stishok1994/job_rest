@@ -40,6 +40,7 @@ function getUserBonus (token) {
   })
   .then(data => {
     document.getElementById('user-bonus').textContent = data['Баланс бонусных баллов'];
+    localStorage.setItem('bonus', JSON.stringify(data['Баланс бонусных баллов']));
     // console.log(data);
   })
   .catch(error => {

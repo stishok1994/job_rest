@@ -1,7 +1,5 @@
 // Отрисовываем категорию 'Гарниры' по ссылке Заказать доставку и Меню
 
-
-
 // Получаем категории для страницы Меню
 const UrlMenuOne = 'https://pinzeria.tw1.ru/api/category'
 
@@ -20,11 +18,11 @@ document.addEventListener('DOMContentLoaded', function() {
     // function application
 fetchData(UrlMenuOne)
 .then(data => {
-    console.log(`get data-`, data.categories, `Type-`, typeof data) 
+    // console.log(`get data-`, data.categories, `Type-`, typeof data) 
     
     // Создаем массив из названий категорий
     const categoryNames = data.categories[0].category_name;
-    console.log(categoryNames)
+    // console.log(categoryNames)
     //   Ссылка для первой категории
     const UrlCategoriesOne = `https://pinzeria.tw1.ru/api/category?category=${categoryNames}`
     // Меняем название категории меню
@@ -43,7 +41,7 @@ function handleCategoryNames(names, url) {
     // Применение функции
     fetchData(url)
     .then(data => {
-        console.log(`Полученные данные-`, data, `Type-`, typeof data) 
+        // console.log(`Полученные данные-`, data, `Type-`, typeof data) 
         const menuCont = data;
         
         // Проходим по массиву
@@ -66,7 +64,7 @@ function handleCategoryNames(names, url) {
         const contHTML = 
         `<div class="col-8 col-sm-7 col-md-5 col-lg-4 mb-3 mr-5">
         <div class="card-product scale-in-hor-center" data-id="${productInfoCat.id}">
-        <img class="fullImg imgCart" src="${productInfoCat.dishImage}" alt="">
+        <img class="fullImg imgCart" src="${productInfoCat.dishImage}" alt="" data-bs-toggle="modal" data-bs-target="#imageModal">
         <div class="card-body">
             <div class="nameTitleKBU d-flex">
             <h4 class="item-title mb-0">${productInfoCat.dishName}</h4>
@@ -105,20 +103,36 @@ function handleCategoryNames(names, url) {
     tooltipTriggerList.map(function (tooltipTriggerEl) {
     return new bootstrap.Tooltip(tooltipTriggerEl);
     });
+
+    // Обработчик на изображениях
+    handleImageClick();
     
     });
 
 });
 }
-
 })
 
 
 
+    //   Открытие изображений в модальном окне
+// Функция для работы с изображениями
+function handleImageClick() {
+    // Находим все изображения с классом "imgCart"
+    const imgElements = document.querySelectorAll('.imgCart');
 
+    // Вешаем событие на каждое изображение
+    imgElements.forEach(img => {
+        img.addEventListener('click', function() {
+            const imgSrc = img.getAttribute('src'); // Получаем источник изображения
+            const modalImage = document.getElementById('modalImage'); // Модальное изображение
+            modalImage.src = imgSrc; // Устанавливаем источник модального изображения
 
-
-
-    
+            // Открываем модальное окно
+            const modal = new bootstrap.Modal(document.getElementById('imageModal'));
+            modal.show();
+        });
+    });
+}
             
 

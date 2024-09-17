@@ -1,6 +1,8 @@
 // Считаем сумму заказа, уменьшаем и увеличчиваем количество товара в корзине, обновляем LS
 // Подсчет суммы заказа
 updateTotalPrice();
+// Отображение оформления заказа
+checkCartAndUpdateButton()
 
 // Изменяем количество товаров в карточке на странице КОРЗИНЫ
 // Добавляем прослушку на всем окне
@@ -49,9 +51,11 @@ window.addEventListener('click', (event) => {
             // Удаляем товар из корзины
             event.target.closest('.cart-element').remove();
             cart = cart.filter(item => item.id !== (productId));
+            checkCartAndUpdateButton()
         }
         // Обновляем корзину в localStorage
         updateCartInStorage(cart);
+        checkCartAndUpdateButton()
         }
         // Удаляем товар из корзины
         if (event.target.dataset.action === 'remove') {
@@ -66,6 +70,8 @@ window.addEventListener('click', (event) => {
              // Обновляем корзину в localStorage
             updateCartInStorage(cart);
             event.target.closest('.cart-element').remove();
+            // отображение заказа
+            checkCartAndUpdateButton()
         }
 
     // updateLocalStorage();
@@ -99,3 +105,24 @@ function updateCartInStorage(cart) {
     localStorage.setItem("cart", JSON.stringify(cart));
 }
 
+
+// отображение и скрытие оформления заказа
+async function checkCartAndUpdateButton() {
+    // Есть ли в LocalStorage переменная cart
+if (localStorage.getItem("cart")) {
+    // получаем значение этой переменной
+    const cart = JSON.parse(localStorage.getItem("cart"));
+  
+    // есть ли в корзине хотя бы один товар
+    if (cart.length > 0) {
+      // Если есть, отображаем кнопку
+      document.querySelector(".place-order").style.display = "block";
+    } else {
+      // скрываем кнопку
+      document.querySelector(".place-order").style.display = "none";
+    }
+  } else {
+    // Если нет переменной "cart" в LocalStorage
+    document.querySelector(".place-order").style.display = "none";
+  }
+}

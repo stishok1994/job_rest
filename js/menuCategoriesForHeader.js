@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // function application
 fetchData(UrlMenuCat)
 .then(data => {
-    console.log(`get data-`, data.categories, `Type-`, typeof data) 
+    // console.log(`get data-`, data.categories, `Type-`, typeof data) 
     
     // Создаем массив из названий категорий
     const categoryNames = data.categories.map(category => category.category_name);
@@ -37,6 +37,9 @@ fetchData(UrlMenuCat)
         parentDiv.insertAdjacentHTML('beforeend', cartItemHTML);
     }
 
+    // подсвечиваем первый
+    addClassToFirstMenuItem();
+
     initializeMenuClickListeners();    
 })
 
@@ -45,6 +48,23 @@ fetchData(UrlMenuCat)
 });
 
 
+
+
+
+
+// Добавляем класс первому элементу с классом "menu-item_btn" после загрузки страницы
+function addClassToFirstMenuItem() {
+    // Находим первый элемент с классом "menu-item_btn"
+    const firstMenuItem = document.querySelector('.menu-item_btn');
+
+    // Добавляем класс "active" к найденному элементу
+    if (firstMenuItem) {
+        firstMenuItem.classList.add('frame_item');
+    }
+}
+
+
+// отслеживание нажатия кнопки
 function initializeMenuClickListeners() {
     
 // Получаем все кнопки с классом "menu-item_btn"
@@ -56,7 +76,13 @@ const contentParent = document.querySelector('.content_menu');
 menuButtons.forEach((button) => {
 button.addEventListener('click', (event) => {
     
-    // Получаем текст кнопки, на которую кликнул пользователь
+    // Убираем активный класс со всех кнопок
+    menuButtons.forEach(btn => btn.classList.remove('frame_item'));
+
+    // Добавляем новый класс к нажатой кнопке
+    event.target.classList.add('frame_item');
+    
+    // Получаем текст кнопки, на которую кликнул
     const buttonText = event.target.textContent;
 
     // Меняем название категории меню
@@ -69,27 +95,16 @@ while (contentParent.firstChild) {
     contentParent.removeChild(contentParent.firstChild);
   }
 
-// Создаем новый дочерний блок с текстом кнопки
-
-// вызываем функцию транслитерации URL
-
-    
-// Выводим текст кнопки в консоль
-console.log('Вы нажали на кнопку:', buttonText);
-
 //   Отрисовываем новый контент
 // Получаем ссылку на категорию
-// const myUrl = `http://147.45.109.158:8881/api/category?category=${buttonText}`
 const UrlCategories = `https://pinzeria.tw1.ru/api/category?category=${buttonText}`
 
 
 // Применение функции
 fetchData(UrlCategories)
     .then(data => {
-        console.log(`Полученные данные-`, data, `Type-`, typeof data) 
+        // console.log(`Полученные данные-`, data, `Type-`, typeof data) 
         const menuCont = data;
-        // console.log(menuCont[buttonText])
-        // console.log(contentParent)
         
         // Проходим по массиву
         menuCont[buttonText].forEach(dish => {
@@ -141,6 +156,7 @@ fetchData(UrlCategories)
         </div>
 </div>`
 
+
         // добавляем шаблон на экран
         contentParent.insertAdjacentHTML('beforeend', contHTML);
 
@@ -149,7 +165,11 @@ fetchData(UrlCategories)
         tooltipTriggerList.map(function (tooltipTriggerEl) {
         return new bootstrap.Tooltip(tooltipTriggerEl);
         });
-        
+
+
+        // Обработчик на изображениях
+        handleImageClick();
+
         });
 
     });
@@ -160,3 +180,26 @@ fetchData(UrlCategories)
 
 };
   });
+
+
+
+  
+//   Открытие изображений в модальном окне
+// Функция для работы с изображениями
+function handleImageClick() {
+    // Находим все изображения с классом "imgCart"
+    const imgElements = document.querySelectorAll('.imgCart');
+
+    // Вешаем событие на каждое изображение
+    imgElements.forEach(img => {
+        img.addEventListener('click', function() {
+            const imgSrc = img.getAttribute('src'); // Получаем источник изображения
+            const modalImage = document.getElementById('modalImage'); // Модальное изображение
+            modalImage.src = imgSrc; // Устанавливаем источник модального изображения
+
+            // Открываем модальное окно
+            const modal = new bootstrap.Modal(document.getElementById('imageModal'));
+            modal.show();
+        });
+    });
+}

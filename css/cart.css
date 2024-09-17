@@ -1,7 +1,23 @@
+body {
+    font-family: "Poiret One", sans-serif;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 22px;
+    /* font-weight: 400; */
+}
+
 .backgr-img {
     z-index: -1;
 }
-.background-circle {
+
+h2 {
+    font-weight: bold;
+}
+
+.bckg-top-rgth1,
+.bckg-top-rgth2,
+.bckg-top-lft1,
+.bckg-top-lft2 {
     z-index: 0;
 }
 .cart-element {
@@ -19,8 +35,8 @@
     z-index: 5;
 }
 .name-prod-cart {
-    font-size: 28px;
-    font-weight: 300;
+    font-size: 16px;
+    /* font-weight: 300; */
 }
 .action-counter_cart {
     display: flex;
@@ -34,33 +50,32 @@
     padding: 0 10px;
     border-radius: 10px;
 }
-/* .items-action_cart:hover {
-    background: #eb5a1e;
-    color: #FFF;
-} */
+
 .action-counter_cart {
     border: #4e4c4c83 1px solid;
     border-radius: 10px;
 }
 .cart-price {
-    margin: 0 auto;
     z-index: 5;
+    
 }
 .icon-delet {
-    font-size: 24px;
-    font-weight: 100;
     cursor: pointer;
     z-index: 5;
 }
 .total-price_blok {
     z-index: 5;
+    margin-top: 15px;
 }
 
 .total-price_blok div {
     font-size: 18px;
     font-weight: bold;
 }
-
+.itemForPrice  {
+    font-size: 14px;
+    /* font-weight: 400; */
+}
 
 
 
@@ -75,29 +90,40 @@
         }
         .total-price_blok div {
             font-size: 17px;
-            font-weight: bold;
+            /* font-weight: bold; */
         }
         .name-prod-cart {
-            font-size: 13px;
-            font-weight: 300;
+            font-size: 16px;
+            /* font-weight: 400; */
         }
         .cart-name-title,
         .itemForPrice {
             padding: 0 2px;
         }
-        .action-counter_cart {
-            font-size: 12px;
-            font-weight: 200;
-            width: 60px;
-        }
         .cart-price {
-            font-size: 13px;
-            font-weight: bold;
-            margin: 0 auto;
+            margin: 15px 10px;
         }
-        .icon-delet {
-            font-size: 10px;
+        .itemForPrice {
+            font-size: 14px;
+            /* font-weight: 400; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
+        .btn-place-order_text {
+            font-size: 15px !important;
+            font-weight: bold !important;
+            /* font-weight: 400; */
+        }
+        .place-order {
+            margin-top: 15px;
+            width: 60%;
+        }
+        .place-order {
+            width: 60%;
+        }
+
+
     }
 
         /* 768px и более */
@@ -110,22 +136,27 @@
             font-weight: bold;
         }
         .name-prod-cart {
-            font-size: 17px;
-            font-weight: 300;
-        }
-        .action-counter_cart {
-            font-size: 18px;
-            font-weight: 200;
-            width: 90px;
+            font-size: 20px;
+            /* font-weight: 300; */
         }
         .cart-price {
-            font-size: 20px;
-            font-weight: bold;
             margin: 0 auto;
         }
-        .icon-delet {
+        .itemForPrice {
             font-size: 18px;
+            /* font-weight: 400; */
+            display: flex;
+            justify-content: start;
+            align-items: center;
         }
+        .btn-place-order_text {
+            font-size: 18px;
+            /* font-weight: 400; */
+        }
+        .btn-place-order {
+            width: 250px;
+        }
+        
       }
 
     /* Стили для экранов шириной 992px и более */
@@ -138,21 +169,8 @@
                 font-weight: bold;
             }
             .name-prod-cart {
-                font-size: 20px;
-                font-weight: 300;
-            }
-            .action-counter_cart {
-                font-size: 20px;
-                font-weight: 200;
-                width: 100px;
-            }
-            .cart-price {
                 font-size: 22px;
-                font-weight: bold;
-                margin: 0 auto;
-            }
-            .icon-delet {
-                font-size: 20px;
+                /* font-weight: 400; */
             }
         }
 
@@ -161,23 +179,29 @@
           @media (min-width: 1200px) {
             .total-price_blok div {
                 font-size: 28px;
-                font-weight: bold;
+                /* font-weight: bold; */
             }
             .name-prod-cart {
-                font-size: 22px;
-                font-weight: 300;
-            }
-            .action-counter_cart {
-                font-size: 22px;
-                font-weight: 300;
-                width: 120px;
+                font-size: 24px;
+                /* font-weight: 400; */
             }
             .cart-price {
-                font-size: 24px;
-                font-weight: bold;
                 margin: 0 auto;
             }
             .icon-delet {
                 font-size: 20px;
+            }
+            /* btn */
+            .btn-place-order {
+                width: 400px;
+                z-index: 5;
+            }
+            .btn-place-order_text {
+                font-size: 20px;
+                font-weight: 400;
+            }
+            .itemForPrice {
+                font-size: 24px;
+                /* font-weight: 400; */
             }
           }

@@ -38,34 +38,36 @@ window.addEventListener('click', (event) => {
 
 
 // Анимация к мероприятиям
-document.addEventListener('DOMContentLoaded', function() {
-  const imageContainers = document.querySelectorAll('.image-container');
-  const overlay = document.getElementById('overlay');
-  const overlayImage = document.getElementById('overlay-image');
-  const overlayClose = document.getElementById('overlay-close');
 
-  let currentImageContainer = null;
+// старое увеличение
+// document.addEventListener('DOMContentLoaded', function() {
+//   const imageContainers = document.querySelectorAll('.image-container');
+//   const overlay = document.getElementById('overlay');
+//   const overlayImage = document.getElementById('overlay-image');
+//   const overlayClose = document.getElementById('overlay-close');
 
-  imageContainers.forEach(container => {
-      container.addEventListener('click', () => {
-          const imgSrc = container.querySelector('.image-item').src;
-          overlayImage.src = imgSrc;
-          overlay.classList.add('show');
-          currentImageContainer = container;
-      });
-  });
+//   let currentImageContainer = null;
 
-  overlayClose.addEventListener('click', () => {
-      overlay.classList.remove('show');
-      currentImageContainer = null;
-  });
+//   imageContainers.forEach(container => {
+//       container.addEventListener('click', () => {
+//           const imgSrc = container.querySelector('.image-item').src;
+//           overlayImage.src = imgSrc;
+//           overlay.classList.add('show');
+//           currentImageContainer = container;
+//       });
+//   });
 
-  overlay.addEventListener('click', (event) => {
-      if (event.target === overlay) {
-          overlay.classList.remove('show');
-          currentImageContainer = null;
-      }
-  });
+//   overlayClose.addEventListener('click', () => {
+//       overlay.classList.remove('show');
+//       currentImageContainer = null;
+//   });
+
+//   overlay.addEventListener('click', (event) => {
+//       if (event.target === overlay || event.target === overlayImage) {
+//           overlay.classList.remove('show');
+//           currentImageContainer = null;
+//       }
+//   });
+// })
 
 
-})

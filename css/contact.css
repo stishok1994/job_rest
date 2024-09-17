@@ -1,0 +1,92 @@
+body {
+    font-family: "Poiret One", sans-serif;
+    font-weight: bold;
+    font-style: normal;
+}
+.blok-info {
+    margin-bottom: 50px;
+}
+.cont_img {
+    border-radius: 20px;
+    display: d-block;
+    width: 80%;
+    height: auto;
+}
+.cont-block_data {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.telegram-block,
+.whatsap-block,
+.VK-block {
+    border: 1px solid #636262;
+    border-radius: 15px;
+    padding: 3px 10px;
+}
+.link-telegram,
+.link-whatsap,
+.link-vk {
+    display: flex;
+    justify-content: space-between;
+    text-decoration: none;
+    color: black;
+    width: 100%;
+}
+.arrow-link {
+    background-color: rgb(254,64,48,0.95);
+    padding: 10px;
+    border-radius: 50%;
+}
+
+
+/* Для различной ширины */
+@media (min-width: 350px) {
+    .cont_img {
+        width: 60%;
+        height: auto;
+    }
+    .telegram-block,
+    .whatsap-block,
+    .VK-block {
+        width: 70%;
+        margin: 10px 0;
+    }
+    .link-telegram,
+    .link-whatsap,
+    .link-vk {
+    font-size: 20px;
+}
+.phone-title {
+    margin-top: 20px;
+}
+.cont-block_address {
+    font-size: 24px;
+}
+
+}
+
+@media (min-width: 992px) {
+    .cont_img {
+        width: 80%;
+        height: auto;
+    }
+    .telegram-block,
+    .whatsap-block,
+    .VK-block {
+        width: 90%;
+        margin: 20px 0;
+    }
+    .link-telegram,
+    .link-whatsap,
+    .link-vk {
+    font-size: 32px;
+}
+.phone-title {
+    margin-top: 30px;
+}
+.cont-block_address {
+    font-size: 32px;
+}
+
+}

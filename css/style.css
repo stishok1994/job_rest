@@ -1,16 +1,13 @@
-
-
 .container {
     max-width: 1400px;
     padding: 0 10px;
 }
 
 body {
-    /* font-family: "Merriweather", serif; */
-    font-family: "Philosopher", serif;
+    font-family: "Poiret One", sans-serif;
+    font-weight: bold;
     font-style: normal;
     font-size: 32px;
-    font-weight: 300;
     /* overflow-x: hidden; */
 }
 
@@ -56,7 +53,7 @@ body {
     font-size: 15px;
 }
 .btn-modal-res-tabl {
-    background-color: rgba(254, 64, 48, 0.95);
+    background-color: #fe4030fb;
     border: none;
 }
 .btn-modal-res-tabl:hover {
@@ -160,6 +157,17 @@ body {
 .navbar {
     background-color: transparent !important;
 }
+.navbar-text,
+        .adr-phone,
+        .nav-phone_text,
+        .priceItem,
+        .phone-header {
+            font-weight: bold !important;
+        }
+
+    .valentino-link {
+        display: block;
+    }
     /* кнопка  */
 .navbar-toggler {
     background-color: rgba(251, 240, 240, 0.6);;
@@ -171,10 +179,20 @@ body {
 .adr-phone,
 .adr-phone a {
     font-size: 18px;
-    font-weight: 400;
+    font-weight: bold;
     color: black;
     text-decoration: none;
-    
+}
+.btn-header_bottom,
+.btn-header_top,
+.btn-right-blok,
+.btm-pers-area
+ {
+    font-weight: bold !important;
+}
+.btm-pers-area
+ {
+    font-weight: bold !important;
 }
 
 .btm-reserv-table-nav {
@@ -187,7 +205,7 @@ body {
 .btn-main {
     border-radius: 30px;
     line-height: 1;
-    background-color: rgba(254,64,48,0.95);
+    background-color: #fe4030fb;
     padding: 10px 10px;
 }
 .btn-header_top {
@@ -207,6 +225,24 @@ body {
     font-size: 14px;
     z-index: 10;
 }
+        /* Ввод */
+        .input-text {
+            font-weight: bold;
+        }
+        #show-password,
+        #show-password1,
+        #show-password2,
+        #btn-input_id,
+        .btn
+         {
+            font-weight: bold;
+        }
+        
+        #show-password,
+        #show-password1,
+        #show-password2 {
+            color: #000;
+        }
 
 /* Card */
     .card {
@@ -214,7 +250,7 @@ body {
         align-items: center;
         background-color: transparent;
         border: none;
-        margin-top: 20px;
+        margin-top: 5px;
     }
     .card-img {
         box-shadow: -7px 7px 3px 0px rgba(67, 66, 66, 0.2);
@@ -227,7 +263,7 @@ body {
         align-items: center;
         border-radius: 50px;
         line-height: 1;
-        background-color: rgb(254,64,48,0.95);
+        background-color: #fe4030fb;
         padding: 10px 20px;
     }
     .cardLogo {
@@ -236,10 +272,9 @@ body {
         width: 50px;
     }
     .cardValue {
-        /* font-family: "Merriweather", serif; */
-        font-family: "Playfair Display", serif;
+        font-family: "Poiret One", sans-serif;
+        font-weight: bold;
         font-size: 15px;
-        font-weight: 400;
         text-decoration: none;
         color: #fdfbfb;
         margin-left: 15px;
@@ -260,14 +295,14 @@ body {
     color: rgb(0, 0, 0);
     margin-bottom: 9px;
     line-height: 1;
-    font-weight: 400;
+    font-weight: bold;
  }
  .name2 {
     text-transform: uppercase;
     color: rgb(0, 0, 0);
     padding: 0;
     line-height: 1;
-    font-weight: 400;
+    font-weight: bold;
  }
  .btn-header_btn {
     font-size: 12px;
@@ -314,6 +349,9 @@ body {
 .pt-20 {
     padding-top: 20px;
 }
+.pl-5px {
+    padding-left: 5px;
+}
 
 /* Фон */
 .backgr-img {
@@ -328,7 +366,7 @@ body {
 /*  Слайдер */
 .slaider-title {
     font-size: 16px;
-    font-weight: 400;
+    font-weight: bold;
     text-align: center;
     color: #000;
     margin: 0 20px 15px;
@@ -362,7 +400,7 @@ body {
     }
     .slider-left_text {
         font-size: 12px;
-        font-weight: 300;
+        font-weight: bold;
         width: 100%;
         text-align: center;
         margin-top: auto;
@@ -379,7 +417,7 @@ body {
     }
     .slider-right_text {
         font-size: 20px;
-        font-weight: 400;
+        font-weight: bold;
         text-decoration: none;
         color: #000;
         position: absolute;
@@ -448,7 +486,7 @@ body {
         }
         .menu-title p {
             font-size: 43px;
-            font-weight: 400;
+            font-weight: bold;
         }
         /* Карточка */
         .card-link {
@@ -458,7 +496,7 @@ body {
             cursor: pointer;
         }
         .btm-menu {
-            background-color: rgba(254, 64, 48, 0.95);
+            background-color: #fe4030fb;
             border-radius: 50px;
             padding: 5px 10px;
             max-width: 60%;
@@ -469,7 +507,7 @@ body {
         }
         .btm-menu p {
             font-size: 14px;
-            font-weight: 200;
+            font-weight: bold;
             color: #f9f7f7;
             padding: 0;
             margin: 0;
@@ -513,7 +551,7 @@ body {
         }
         .card-title_Name h5 {
             font-size: 22px;
-            font-weight: 400;
+            font-weight: bold;
             color: #FFF;
             align-items: center;
 
@@ -527,7 +565,7 @@ body {
     }
     .event-title p {
         font-size: 43px;
-        font-weight: 400;
+        font-weight: bold;
     }
     .card-event {
         overflow: hidden;
@@ -584,6 +622,7 @@ body {
       .box:hover div:not(:hover) {
         filter: grayscale(1) blur(1px);
       }
+      /* модальное для событий */
       .overlay {
         position: fixed;
         top: 0;
@@ -616,6 +655,56 @@ body {
     .overlay.show .overlay-image {
         transform: scale(1);
     }
+    /* модальное для слайдера */
+    /* The Image Modal (background) */
+.image-modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0); /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.9); /* Black w/ opacity */
+  }
+  
+  /* Modal Content (Image) */
+  .modal-content-slaider {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+  }
+  
+  /* The Close Button */
+  .close-button {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+  
+  .close-button:hover,
+  .close-button:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  /* Add Animation - Zoom in the Modal */
+  .modal-content-slaider {
+    animation-name: zoom;
+    animation-duration: 0.6s;
+  }
+  
+
+  
       
       @media screen and (max-width: 1080px) {
         .box {
@@ -634,10 +723,8 @@ body {
     .footer {
         margin-top: 100px;
         padding: 0 30px;
-        /* font-family: "Merriweather", serif !important; */
-        font-family: "Philosopher", serif;
-        font-style: normal;
-        font-weight: 400;
+        font-family: "Poiret One", sans-serif;
+        font-weight: bold;
     }
     .bi {
         vertical-align: -.125em;
@@ -662,15 +749,15 @@ body {
       }
       .footer h5 {
         font-size: 20px;
-        font-weight: 700;
+        font-weight: bold;
       }
       .footer-btm-text a{
         font-size: 18px;
-        font-weight: 400;
+        font-weight: bold;
       }
       .btm-footer {
         font-size: 18px;
-        font-weight: 400;
+        font-weight: bold;
         background-color: #F1ECEC;
         padding: 16px 0;
         max-width: 100%;
@@ -681,11 +768,10 @@ body {
       }
       .navbar-text {
         font-size: 15px;
-        font-weight: 500;
     }
     .nav-btn button {
         font-size: 12px;
-        font-weight: 400;
+        font-weight: bold;
     }
  .menu-header {
     display: flex;
@@ -711,6 +797,10 @@ body {
         width: auto; 
         margin-right: 5px;
       }
+      .valentino-cart {
+        display: none;
+      }
+      
 
 
 /* Для различной ширины и высоты экрана */
@@ -744,8 +834,10 @@ body {
       @media (min-width: 350px) {
         .navbar-text {
             font-size: 17px;
-            font-weight: 500;
         }
+        .valentino-cart {
+            display: none;
+          }
         .slider-right_top {
             display: none;
         }
@@ -758,7 +850,7 @@ body {
         .btm-pers-area
          {
             font-size: 12px;
-            font-weight: 300;
+            font-weight: bold;
         }
         .btm-pers-area {
             width: 50px;
@@ -777,11 +869,11 @@ body {
         .menu-title p,
         .event-title p {
             font-size: 26px;
-            font-weight: 400;
+            font-weight: bold;
         }
         .btm-footer {
             font-size: 15px;
-            font-weight: 400;
+            font-weight: bold;
           }
           .img-for-titleCart {
             max-width: 75%;
@@ -812,7 +904,7 @@ body {
         
         .btn-header_btn {
             font-size: 13px;
-            font-weight: 200;
+            font-weight: bold;
             padding: 8px 0;
             width: 160px;
             border-radius: 30px;
@@ -871,7 +963,6 @@ body {
       @media (min-width: 768px) {
         .navbar-text {
             font-size: 16px;
-            font-weight: 500;
         }
         .nav-btn,
         .pers-area-nav {
@@ -880,7 +971,7 @@ body {
         .adr-phone,
         .adr-phone a {
             font-size: 13px;
-            font-weight: 400;
+            font-weight: bold;
             margin-left: 5px;
         }
         .left-btm-img,
@@ -910,11 +1001,11 @@ body {
         .menu-title p,
         .event-title p {
             font-size: 26px;
-            font-weight: 400;
+            font-weight: bold;
         }
         .btm-footer {
             font-size: 16px;
-            font-weight: 400;
+            font-weight: bold;
           }
           .img-for-titleCart {
             max-width: 80%;
@@ -947,7 +1038,7 @@ body {
         }
         .btn-header_btn {
             font-size: 15px;
-            font-weight: 300;
+            font-weight: bold;
             padding: 10px 0;
             width: 170px;
             border-radius: 30px;
@@ -958,13 +1049,26 @@ body {
         .right-btm-img {
             max-width: 110px;
         }
+        .logo-on-header {
+            max-width: 180px; 
+            height: auto;
+        }
+        /* скрываем valentino */
+        .valentino-link {
+            display: none !important;
+        }
+        .valentino-cart {
+            display: block;
+            width: 100px; 
+            height: auto; 
+            margin-bottom: 15px;
+          }
     }
 
         /* 992px */
       @media (min-width: 992px) {
         .navbar-text {
             font-size: 20px;
-            font-weight: 500;
         }
         .name1 {
             font-size: 26px;
@@ -974,9 +1078,6 @@ body {
             font-size: 40px;
             width: 500;
          }
-         /* .head-btm_deliv_aboutrest {
-            margin-left: 55px;
-        } */
         .btn-header_btn {
             font-size: 16px;
             padding: 13px 0;
@@ -994,7 +1095,7 @@ body {
         }
         .slaider-title {
             font-size: 28px;
-            font-weight: 400;
+            font-weight: bold;
         }
         .slider-left_text {
             font-size: 18px;
@@ -1002,11 +1103,11 @@ body {
         .menu-title p,
         .event-title p {
             font-size: 36px;
-            font-weight: 400;
+            font-weight: bold;
         }
         .btm-footer {
             font-size: 18px;
-            font-weight: 400;
+            font-weight: bold;
           }
           .img-for-titleCart {
             max-width: 85%;
@@ -1017,37 +1118,44 @@ body {
             padding-right: 30px;
         }
         .left-top-img {
-            max-width: 220px;
+            max-width: 200px;
             height: auto;
         }
         .right-top-img {
-            max-width: 180px;
+            max-width: 200px;
             height: auto;
         }
         .text-body-secondary {
             font-size: 20px;
         }
+        .valentino-cart {
+            display: block;
+            width: 130px; 
+            height: auto; 
+            margin-bottom: 15px;
+          }
       }
+
+
       /* 1200 */
       @media (min-width: 1200px) {
         .navbar-text {
             font-size: 26px;
             font-weight: bold;
-            font-weight: 500;
         }
         .adr-phone,
         .adr-phone a {
             font-size: 22px;
-            font-weight: 400;
+            font-weight: bold;
         }
         .name1 {
             font-size: 50px;
-            font-weight: 500;
+            font-weight: bold;
             width: 500;
         }
         .name2 {
             font-size: 85px;
-            font-weight: 500;
+            font-weight: bold;
             width: 700;
         }
         .head-btm_deliv_aboutrest {
@@ -1084,12 +1192,10 @@ body {
         .btm-pers-area
          {
             font-size: 16px;
-            font-weight: 300;
         }
         .btm-pers-area
          {
             font-size: 22px;
-            font-weight: 300;
             padding: 7px 5px;
         }
         .btn-header_top {
@@ -1106,6 +1212,16 @@ body {
         .personal-info_modal {
             font-size: 20px;
         }
+        .logo-on-header {
+            max-width: 220px; 
+            height: auto;
+        }
+        .valentino-cart {
+            display: block;
+            width: 160px; 
+            height: auto; 
+            margin-bottom: 20px;
+          }
       }
 
         /* 1400 */
@@ -1154,7 +1270,7 @@ body {
     }
     .card-title_Name h5 {
         font-size: 16px;
-        font-weight: 400;
+        font-weight: bold;
     }
   }
 
@@ -1163,14 +1279,7 @@ body {
     .header-bottom-title {
         margin-top: 10px;
     }
-    /* .head-btm-img1 {
-        max-height: 40%;
-        width: auto;
-    }
-    .head-btm-img2 {
-        max-height: 25%;
-        width: auto;
-    } */
+
 }
     /* Стили для экранов шириной 992px и более  */
   @media (min-width: 992px) {
