@@ -12,8 +12,7 @@
 
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <!-- Анимация для мероприятий -->
-    <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+
     <!-- icon -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="/css/font-awesome.min.css">
@@ -25,6 +24,7 @@
     <!-- My css -->
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/animation.css">
+    <link rel="stylesheet" href="/css/event.css">
 </head>
 
 <body>
@@ -150,7 +150,8 @@
                                     </div>
                                     </div>  
                                   <div class="adr-phone me-4  ml-10">
-                                  <span class="me-3">г. Воронеж ул.Урицкого, 70</span><span><a class="nav-phone_text" href="tel:+7(473) 233-33-01">+7(473) 233-33-01</a></span>
+                                  <span class="me-3"><a href="https://yandex.ru/maps/org/pinzeria_by_bontempi/135293455048/?indoorLevel=1&ll=39.199631%2C51.682955&z=16.66" class="" target="_blank">г. Воронеж ул.Урицкого, 70</a></span>
+                                  <span><a class="nav-phone_text" href="tel:+7(473) 233-33-01">+7(473) 233-33-01</a></span> 
                                   </div>
                               </div>
                           </div>
@@ -373,6 +374,7 @@
   <div class="backgr-img pt-3">
     <img class="slider-left_img1 img-fluid col" src="/img/slider/Ellipse-left1.png" alt="">
     <img class="slider-left_img2 img-fluid col" src="/img/slider/Ellipse-left2.png" alt="">
+    
     <!--Slaider-->
     <div class="container">
       <div class="slaider">
@@ -417,11 +419,11 @@
                     <img class="modal-content-slaider" id="modal-image">
                   </div>
                                     
-                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev2">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Предыдущий</span>
                   </button>
-                  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+                  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next2">
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Следующий</span>
                   </button>
@@ -596,8 +598,7 @@
         </div>
         <div class="row">
           
-          <div class="box">
-            <div class="image-container">
+            <!-- <div class="image-container">
                 <img src="/img/event/1.jpg" class="img-fluid scale-event image-item" data-original-size="100%"/>
             </div>
             <div class="image-container">
@@ -605,15 +606,114 @@
             </div>
             <div class="image-container">
                 <img src="/img/event/ev3.png" class="img-fluid scale-event image-item" alt="song" data-original-size="100%" />
+            </div> -->
+
+            <div class="gallery row d-flex justify-content-center">
+              <!-- Main photo -->
+              <div class="photo d-flex flex-column align-items-center col-7 col-sm-5 col-lg-4">
+                  <img src="img/event/1.jpg" alt="Main Photo 1" class="main-photo img-fluid" data-album="album1">
+                  <p class="photo-caption text-center">Интерьер</p>
+              </div>
+
+              <div class="photo d-flex flex-column align-items-center col-7 col-sm-5 col-lg-4">
+                <img src="img/event/3.jpg" alt="Main Photo 2" class="main-photo img-fluid" data-album="album2">
+                <p class="photo-caption text-center">Гала-ужин с бренд-шефом Валентино Бонтемпи</p>
+              </div>
+
+              <div class="photo d-flex flex-column align-items-center col-7 col-sm-5 col-lg-4">
+                  <img src="img/event/wedding/2.jpg" alt="Main Photo 3" class="main-photo" data-album="album3">
+                  <p class="photo-caption text-center">"Итальянская" свадьба</p>
+              </div>
+            </div>
+      
+          <!-- Альбомы с фотографиями -->
+          <div id="album1" class="album">
+            <div>
+              <span class="close">&times;</span>
+            </div>
+            <div class="album-content">
+                  <div class="row">
+                    <div class="d-flex justify-content-center col-6 col-md-4 col-lg-3 mb-3">
+                      <img src="img/event/dinner/1.jpg" alt="Album 1 Photo 1" class="album-photo img-fluid">
+                    </div>
+                    <div class="d-flex justify-content-center col-6 col-md-4 col-lg-3 mb-3">
+                      <img src="img/event/dinner/2.jpg" alt="Album 1 Photo 2" class="album-photo img-fluid">
+                    </div>
+                    <div class="d-flex justify-content-center col-6 col-md-4 col-lg-3 mb-3">
+                      <img src="img/event/dinner/3.jpg" alt="Album 1 Photo 3" class="album-photo img-fluid">
+                    </div>
+                    <div class="d-flex justify-content-center col-6 col-md-4 col-lg-3 mb-3">
+                      <img src="img/event/dinner/4.jpg" alt="Album 1 Photo 2" class="album-photo img-fluid">
+                    </div>
+                    <div class="d-flex justify-content-center col-6 col-md-4 col-lg-3 mb-3">
+                      <img src="img/event/dinner/5.jpg" alt="Album 1 Photo 1" class="album-photo img-fluid">
+                    </div>
+                    <div class="d-flex justify-content-center col-6 col-md-4 col-lg-3 mb-3">
+                      <img src="img/event/dinner/6.jpg" alt="Album 1 Photo 1" class="album-photo img-fluid">
+                    </div>
+                    <div class="d-flex justify-content-center col-6 col-md-4 col-lg-3 mb-3">
+                      <img src="img/event/dinner/7.jpg" alt="Album 1 Photo 2" class="album-photo img-fluid">
+                    </div>
+                    <div class="d-flex justify-content-center col-6 col-md-4 col-lg-3 mb-3">
+                      <img src="img/event/dinner/8.jpg" alt="Album 1 Photo 3" class="album-photo img-fluid">
+                    </div>                  
+                  </div>
             </div>
         </div>
         
-        <!-- modal windows for event-->
-        <!-- <div class="overlay" id="overlay">
-            <img src="" class="overlay-image" id="overlay-image" />
-            <div class="overlay-close" id="overlay-close">&times;</div>
-        </div>      -->
+          <div id="album2" class="album">
+            <div>
+              <span class="close">&times;</span>
+            </div>
+            <div class="album-content">
+              <div class="row">
+                <div class="d-flex justify-content-center col-6 col-md-4 col-lg-3 mb-3">
+                  <img src="img/event/dinner/1.jpg" alt="Album 1 Photo 1" class="album-photo img-fluid">
+                </div>
+                <div class="d-flex justify-content-center col-6 col-md-4 col-lg-3 mb-3">
+                  <img src="img/event/dinner/2.jpg" alt="Album 1 Photo 2" class="album-photo img-fluid">
+                </div>
+                <div class="d-flex justify-content-center col-6 col-md-4 col-lg-3 mb-3">
+                  <img src="img/event/dinner/3.jpg" alt="Album 1 Photo 3" class="album-photo img-fluid">
+                </div>
+                <div class="d-flex justify-content-center col-6 col-md-4 col-lg-3 mb-3">
+                  <img src="img/event/dinner/4.jpg" alt="Album 1 Photo 3" class="album-photo img-fluid">
+                </div>
+                <div class="d-flex justify-content-center col-6 col-md-4 col-lg-3 mb-3">
+                  <img src="img/event/dinner/5.jpg" alt="Album 1 Photo 3" class="album-photo img-fluid">
+                </div>
+              </div>
+            </div>
+          </div>
 
+          <div id="album3" class="album">
+            <div>
+              <span class="close">&times;</span>
+            </div>
+            <div class="album-content">
+              <div class="row">
+                <div class="d-flex justify-content-center col-6 col-md-4 col-lg-3 mb-3">
+                  <img src="img/event/wedding/1.jpg" alt="Album 3 Photo 1" class="album-photo img-fluid">
+                </div>
+                <div class="d-flex justify-content-center col-6 col-md-4 col-lg-3 mb-3">
+                  <img src="img/event/wedding/2.jpg" alt="Album 3 Photo 2" class="album-photo img-fluid">
+                </div>
+                <div class="d-flex justify-content-center col-6 col-md-4 col-lg-3 mb-3">
+                  <img src="img/event/wedding/3.jpg" alt="Album 3 Photo 3" class="album-photo img-fluid">
+                </div>   
+              </div>
+            </div>
+          </div>
+            <!-- /event -->
+
+        
+        <!-- modal windows for event-->
+          <div id="imageModal" class="image-modal_event">
+            <span class="close">&times;</span>
+            <img class="image-modal-content" id="modalImage">
+            <a class="prev">&#10094;</a>
+            <a class="next">&#10095;</a>
+          </div>
         </div>
 
         <!-- <div class="event-content row">
@@ -678,7 +778,7 @@
           </div>
           <div class="map-footer col-md-auto mb-3">
             <div class="row">
-              <p class="text-body-secondary">Как нас найти</p>
+              <h5 class="text-body-secondary">Как нас найти</h5>
             </div>
             <div class="row">
               <div class="map p-0">
@@ -725,6 +825,8 @@
      <script src="/js/event.js"></script>
      <!-- Бронь стола -->
       <script src="/js/reservationTable.js"></script>
+      <!-- Event slaider -->
+       <script src="/js/slider_event.js"></script>
 
 
 </body>
