@@ -45,10 +45,11 @@ body {
         background-repeat: no-repeat;
         width: 100%;
         height: auto;
-        background-image: url('/img/header_img_backg.png'); 
+        background-image: url('header_img_backg.png'); 
         padding: 0;       
     }
-    .nameSubMenu h4 {
+    .nameSubMenu h4,
+    .nameRecomMenu h4 {
         font-size: 28px;
         font-weight: 400;
         margin: 20px;
@@ -77,13 +78,14 @@ body {
     }
     .menu-item_btn {
         font-size: 23px;
-        font-weight: 500;
+        font-weight: bold;
     }
     .header_img_backgr {
         width: 100%;
         height: auto;
     }
-    .content_menu {
+    .content_menu,
+    .recomend-menu {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
@@ -121,7 +123,8 @@ body {
 
     /* Карточка */
     /* Для карточки */
-    .card-product {
+    .card-product,
+    .card-productR {
         display: flex;
         flex-direction: column;
         background-color: #f1f3f5;
@@ -333,8 +336,10 @@ body {
         }
         .menu-item_btn {
             font-size: 18px;
+            font-weight: bold;
         }
-        .nameSubMenu h4 {
+        .nameSubMenu h4,
+        .nameRecomMenu h4 {
             font-size: 26px;
         }
         .btn .btn-block .btn-outline-warning .btn-color {
@@ -343,7 +348,7 @@ body {
         }
         .items {
             width: 80px;
-            font-size: 11px;
+            font-size: 14px;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -368,7 +373,8 @@ body {
             margin-left: 5px;
             margin-right: 5px;
           }
-        .content_menu {
+        .content_menu,
+        .recomend-menu {
         padding-left: 20px;
         padding-right: 20px;
         }
@@ -379,7 +385,7 @@ body {
             height: 20px;
         }
         #add_Cart {
-            font-size: 10px;
+            font-size: 12px;
         }
     
     }
@@ -389,12 +395,13 @@ body {
             font-size: 36px;
             font-weight: 500;
         }
-        .nameSubMenu h4 {
+        .nameSubMenu h4,
+        .nameRecomMenu h4 {
             font-size: 32px;
         }
         .menu-item_btn {
             font-size: 20px;
-            font-weight: 500;
+            font-weight: bold;
         }
         .btnKBU {
             padding: 0 15px;
@@ -411,7 +418,10 @@ body {
         }
         .items {
             width: 100px;
-            font-size: 18px;
+            font-size: 20px;
+        }
+        #add_Cart {
+            font-size: 16px;
         }
         .btn .btn-block .btn-outline-warning .btn-color {
             font-size: 14px;
@@ -436,7 +446,8 @@ body {
             margin-left: 30px;
             margin-right: 30px;
           }
-        .content_menu {
+        .content_menu,
+        .recomend-menu {
         padding-left: 30px;
         padding-right: 30px;
         }
@@ -451,9 +462,7 @@ body {
             font-weight: 300;
             padding: 10;
         }
-        #add_Cart {
-            font-size: 12px;
-        }
+
     }
 
     @media (min-width: 992px) {
@@ -469,7 +478,8 @@ body {
             margin-left: 35px;
             margin-right: 35px;
           }
-        .content_menu {
+        .content_menu,
+        .recomend-menu {
         padding-left: 40px;
         padding-right: 40px;
         }
@@ -484,9 +494,7 @@ body {
             font-weight: 300;
             padding: 10;
         }
-        #add_Cart {
-            font-size: 13px;
-        }
+
     }
     /* 1200px */
     @media (min-width: 1200px) {
@@ -499,7 +507,8 @@ body {
             /* font-weight: 500; */
             font-weight: bold;
         }
-        .nameSubMenu h4 {
+        .nameSubMenu h4,
+        .nameRecomMenu h4 {
             font-size: 36px;
         }
         .menu-item_btn {
@@ -519,7 +528,8 @@ body {
             margin-right: 40px;
           }
           
-        .content_menu {
+        .content_menu,
+        .recomend-menu {
         padding-left: 50px;
         padding-right: 50px;
         }
@@ -528,8 +538,94 @@ body {
             font-weight: 300;
             padding: 10;
         }
-        #add_Cart {
-            font-size: 13px;
+        .items {
+            width: 100px;
+            font-size: 24px;
         }
-        
+        #add_Cart {
+            font-size: 18px;
+        }
     }
+
+
+
+
+
+
+
+
+
+
+
+/* Основной стиль карусели */
+.recomend-menu {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.carousel-inner {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.carousel-item {
+    flex: 0 0 auto;
+    width: 100%; /* Занимает всю ширину контейнера */
+}
+
+.card-productR {
+    max-width: 350px;
+    margin: auto;
+}
+/* 
+img.fullImg {
+    object-fit: cover;
+    width: 100%;
+    height: 200px;
+    border-radius: 10px;
+} */
+
+/* .price__currency {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.btn-color {
+    color: #fff;
+    background-color: #ffcc00;
+}
+
+.btn-color:hover {
+    background-color: #ffb800;
+} */
+
+/* Кнопки управления */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: #000;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+/* Для планшетов и ниже */
+@media (max-width: 768px) {
+    .carousel-inner {
+        display: flex;
+        flex-direction: row;
+        overflow-x: auto;
+        scroll-behavior: smooth;
+    }
+
+    .carousel-item {
+        flex: 0 0 auto;
+        width: 80%; /* Меньше ширина для мобильных устройств */
+    }
+
+    .carousel-control-prev, .carousel-control-next {
+        display: none; /* Убираем кнопки навигации на мобильных */
+    }
+}
+

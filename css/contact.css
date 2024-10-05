@@ -38,7 +38,22 @@ body {
     padding: 10px;
     border-radius: 50%;
 }
-
+.adress_contact {
+    text-decoration: none;
+    color: black;
+}
+.cont-block_address {
+    font-size: 24px;
+}
+.text_btm_contact {
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: 20px;
+}
+.link_text_btm_contact {
+    text-decoration: none;
+    color: black;
+}
 
 /* Для различной ширины */
 @media (min-width: 350px) {
@@ -60,7 +75,8 @@ body {
 .phone-title {
     margin-top: 20px;
 }
-.cont-block_address {
+.cont-block_address,
+.text_btm_contact {
     font-size: 24px;
 }
 

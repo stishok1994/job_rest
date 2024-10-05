@@ -3,6 +3,7 @@ body {
     font-weight: bold;
     font-style: normal;
     font-size: 32px;
+    color: black;
 }
 .my-container {
     margin: 0 7px 0 15px;
@@ -29,6 +30,7 @@ body {
 .delete-adress:hover {
     cursor: pointer;
 }
+
 /* личные данные */
 #user-name, 
 #user-phone,
@@ -48,6 +50,7 @@ body {
 .adressDelivery h2{
     font-size: 16px;
     font-weight: bold;
+    margin-top: 22px;
 }
 .adress-contetnt h2 {
     /* font-weight: 300; */
@@ -57,8 +60,9 @@ body {
     font-size: 16px;
 }
 .adress-contetnt input.adress-block-text {
-    margin-bottom: 10px;
-    padding: 2px 0;
+    margin: 5px;
+    color: black;
+    font-weight: bold;
   }
   /* Выбрать адрес */
 .btn-select-adderess {
@@ -79,6 +83,11 @@ body {
     width: 600px; 
     height: 400px;
 }
+
+
+/* Для input */
+
+    /* /  */
 
 
 /* Для различной ширины и высоты экрана */

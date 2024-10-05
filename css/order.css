@@ -40,23 +40,36 @@ body {
     padding-top: 16px;
 
 }
+    .deliv-value,
+    .delivery-text {
+        color: #000 !important;
+    }
     .name-product,
     .total-price-product,
     .bonus-text,
     .bonus-value,
-    .check-bonus {
+    .check-bonus,
+    .deliv-value,
+    .delivery-text {
         font-size: 14px;
         /* font-weight: 400; */
     }
     .bonus-block {
-        padding-left: 16px;
+        padding: 16px 16px 8px 16px;
         border-radius: 5px;
     }
     .total-value-block {
         font-size: 18px;
+        padding: 16px 16px 8px 16px;
         /* font-weight: 400; */
     }
-    .bonus-value {
+
+    .cart-contetn-order_color {
+        color: #000 !important;
+    }
+
+    .bonus-value,
+    .deliv-value {
         margin-right: 16px;
     }
     .order-data-title {
@@ -70,6 +83,13 @@ body {
     }
     .place-order-btn {
         font-weight: bold;
+    }
+    .rouble {
+        font-weight: 400;
+        color: #000;
+        font-size: 16px;
+        font-family: "Poiret One", sans-serif;
+        /* font-weight: bold; */
     }
 
     /* Ввод */
@@ -92,7 +112,10 @@ body {
         .name-product,
         .total-price-product,
         .bonus-text,
-        .bonus-value {
+        .bonus-value,
+        .deliv-value,
+        .delivery-text,
+        .rouble {
             font-size: 14px;
             /* font-weight: 400; */
         }
@@ -123,7 +146,9 @@ body {
     .comment,
     .delivery-type-text,
     .pay-type-text,
-    .change-check {
+    .change-check,
+    .time-type-text,
+    #timeSelection {
         font-size: 15px;
     }
     .place-order-btn {
@@ -148,7 +173,10 @@ body {
         .name-product,
         .total-price-product,
         .bonus-text,
-        .bonus-value {
+        .bonus-value,
+        .deliv-value,
+        .delivery-text,
+        .rouble {
             font-size: 18px;
             /* font-weight: 500; */
         }
@@ -178,7 +206,9 @@ body {
     .comment,
     .delivery-type-text,
     .pay-type-text,
-    .change-check {
+    .change-check,
+    .time-type-text,
+    #timeSelection {
         font-size: 20px;
     }
     /* btn */

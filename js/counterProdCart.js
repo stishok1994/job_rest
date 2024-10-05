@@ -1,4 +1,5 @@
-// Считаем сумму заказа, уменьшаем и увеличчиваем количество товара в корзине, обновляем LS
+//Считаем сумму заказа, уменьшаем и увеличчиваем количество товара в корзине, обновляем LS
+
 // Подсчет суммы заказа
 updateTotalPrice();
 // Отображение оформления заказа
@@ -86,7 +87,7 @@ function updateTotalPrice() {
     totalPrice = 0;
     priceItems.forEach(item=> {
         const amountIl = item.querySelector('.items-current_cart').innerText;
-        const priceEl = item.querySelector('#catr-price_id').innerText;
+        const priceEl = item.querySelector('#cart-price_id').innerText;
         totalPrice += amountIl*priceEl
     })
     totalPriceElement.textContent=totalPrice;

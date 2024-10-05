@@ -1,7 +1,5 @@
 // Получаем зону и стоимость доставки + выбираем адрес доставки
 
-// [51.660949, 39.200293]
-
 const UrlDelivery = 'https://pinzeria.tw1.ru/orders_info/get_area_delivery/'
 
 // Проверяем наличие адреса в LS
@@ -127,6 +125,7 @@ function init() {
         }
         // Сохраняем адрес в localStorage
         addressToLS(adress);
+
         // Проверяем наличие адреса в LS
         getAddressFromLS()
         ymaps.geocode(address).then(function (res) {
@@ -207,7 +206,7 @@ async function geocodeAddressFromInput() {
           addressSection.textContent = formatAddress(address);
           inputAddressBlock.classList.add('view-hide');
           btnDeleteAddress.classList.remove('view-hide');
-        //   getPriceDelivery()
+
         } else {
           // Если адреса нет, выводим сообщение
           addressSection.textContent = 'Адрес не найден';
@@ -235,17 +234,22 @@ async function getPriceDelivery() {
                 const data = await responce.json();
                 DeliveryCostsBlock.classList.remove('view-hide');
                 DeliveryCostsBlock.textContent = `Стоимость доставки: ${data.coast} ₽`;
+                
+                // сохраняем стоимость в LS
+                localStorage.setItem('priceDeliv', JSON.stringify(data.coast));
                 // console.log(`Полученные данные-`, data, `Type-`, typeof data)
             }
             else {
                 DeliveryCostsBlock.classList.add('view-hide');
                 throw new Error('Проверьте правильность адреса');
-            }}
+            }
+        }
+            
         else {
         }
         };
 
-// Удаление акаунта и адреса
+// Удаление акаунта, ,бонусов и адреса
 //  токен
 const deleteTokenBlock = document.getElementById('log-out_btn');
 //  адрес
@@ -256,7 +260,7 @@ deleteAddressBlock.addEventListener('click', deleteAddress);
 function deleteToken() {
     const DeliveryCostsBlock = document.querySelector('.delivery-costs');
     DeliveryCostsBlock.classList.add('view-hide');
-    ['authToken', 'address', 'coordinate', 'firstName', 'phone', 'email'].forEach(item => localStorage.removeItem(item));
+    ['authToken', 'address', 'coordinate', 'firstName', 'phone', 'email', 'priceDeliv', 'bonus'].forEach(item => localStorage.removeItem(item));
 }
 
 // Удаляем адресс

@@ -13,7 +13,9 @@ body {
 h2 {
     font-weight: bold;
 }
-
+.rouble {
+    font-weight: 400;
+}
 .bckg-top-rgth1,
 .bckg-top-rgth2,
 .bckg-top-lft1,
@@ -76,6 +78,77 @@ h2 {
     font-size: 14px;
     /* font-weight: 400; */
 }
+    /* скрываем блоки */
+    .btn-delivery,
+    .btn-place-order {
+        display: none;
+    }
+    .btn-place-order,
+    .btn-place-order_link {
+        z-index: 10;
+    }
+    .btm-deliver_link,
+    .btn-place-order_link {
+        text-decoration: none;
+    }
+
+    /* Для истории заказа */
+    .order-history-container {
+        max-width: 600px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #f9f9f9;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        position: relative;
+      }
+      .order-history-container,
+      .order-history-title {
+        z-index: 10;
+      }
+      
+      .order-history-title {
+        font-size: 24px;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 20px;
+        color: #333;
+      }
+      
+      .order-items-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      
+      .order-item {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 0;
+        border-bottom: 1px solid #ddd;
+        font-size: 18px;
+      }
+      
+      .order-total {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 20px;
+        font-size: 20px;
+        font-weight: bold;
+      }
+      
+      .total-label {
+        color: #333;
+      }
+      
+      .total-price {
+        color: #000000; /* Цвет итоговой суммы */
+      }
+      .order-block {
+        display: none;
+      }
+      
 
 
 
@@ -84,7 +157,7 @@ h2 {
       /* Style for font size */
 
       /* 350 */
-      @media (min-width: 350px) {
+      @media (min-width: 300px) {
         .txLinkHome {
             font-size: 18px;
         }
@@ -111,7 +184,7 @@ h2 {
             align-items: center;
         }
         .btn-place-order_text {
-            font-size: 15px !important;
+            font-size: 15px;
             font-weight: bold !important;
             /* font-weight: 400; */
         }
@@ -121,6 +194,16 @@ h2 {
         }
         .place-order {
             width: 60%;
+        }
+        .order-items-list {
+            font-size: 16px;
+        }
+        .order-history-container {
+            max-width: 250px;
+        }
+        .total-label,
+        .total-price-order {
+            font-size: 18px;
         }
 
 
@@ -155,6 +238,17 @@ h2 {
         }
         .btn-place-order {
             width: 250px;
+        }
+        /* order */
+        .order-items-list {
+            font-size: 18px;
+        }
+        .order-history-container {
+            max-width: 400px;
+        }
+        .total-label,
+        .total-price-order {
+            font-size: 20px;
         }
         
       }
@@ -203,5 +297,16 @@ h2 {
             .itemForPrice {
                 font-size: 24px;
                 /* font-weight: 400; */
+            }
+            /* order */
+            .order-items-list {
+                font-size: 20px;
+            }
+            .order-history-container {
+                max-width: 600px;
+            }
+            .total-label,
+            .total-price-order {
+                font-size: 22px;
             }
           }

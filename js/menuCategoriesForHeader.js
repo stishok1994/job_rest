@@ -1,4 +1,5 @@
 // Получаем категории для страницы Меню и отрисовываем содержимое категории
+//  + открытие изображений в модальном окне
 const UrlMenuCat = 'https://pinzeria.tw1.ru/api/category'
 
 
@@ -49,9 +50,6 @@ fetchData(UrlMenuCat)
 
 
 
-
-
-
 // Добавляем класс первому элементу с классом "menu-item_btn" после загрузки страницы
 function addClassToFirstMenuItem() {
     // Находим первый элемент с классом "menu-item_btn"
@@ -84,6 +82,7 @@ button.addEventListener('click', (event) => {
     
     // Получаем текст кнопки, на которую кликнул
     const buttonText = event.target.textContent;
+
 
     // Меняем название категории меню
     const nameSubMenu = document.querySelector('.nameSubMenu');
@@ -125,13 +124,13 @@ fetchData(UrlCategories)
         // Создаем шаблон
         const contHTML = 
         `<div class="col-8 col-sm-7 col-md-5 col-lg-4 mb-3 mr-5">
-        <div class="card-product scale-in-hor-center" data-id="${productInfoCat.id}">
-        <img class="fullImg imgCart" src="${productInfoCat.dishImage}" alt="">
+    <div class="card-product scale-in-hor-center" data-id="${productInfoCat.id}">
+        <img class="fullImg imgCart" src="${productInfoCat.dishImage}" alt="" data-bs-toggle="modal" data-bs-target="#imageModal">
         <div class="card-body">
             <div class="nameTitleKBU d-flex">
-            <h4 class="item-title mb-0">${productInfoCat.dishName}</h4>
+                <h4 class="item-title mb-0">${productInfoCat.dishName}</h4>
                 <button type="button" class="btn btn-secondary btnKBU" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-html="true" 
-                data-bs-title="<div class='d-flex justify-content-between'><span class='mr-15'>Калорийность </span><span class='valEnerg'>${ productInfoCat.dishEnergy}</span>г.</div>
+                data-bs-title="<div class='d-flex justify-content-between'><span class='mr-15'>Калорийность </span><span class='valEnerg'>${productInfoCat.dishEnergy}</span>г.</div>
                 <div class='d-flex justify-content-between'><span>Белки </span><span class='valProt'>${productInfoCat.dishProt}<span>г.</span></span></div>
                 <div class='d-flex justify-content-between'><span>Жиры </span><span class='valFat'>${productInfoCat.dishFat}<span>г.</span></span></div>
                 <div class='d-flex justify-content-between'><span>Углеводы </span><span class='valCarb'>${productInfoCat.dishCarbohy}<span>г.</span></span></div>">
@@ -144,7 +143,7 @@ fetchData(UrlCategories)
                     <div class="price__currency"><span class="priceItem">${productInfoCat.dishPrice}</span> ₽</div>
                 </div>
                 <div class="details-wrapper">
-                    <div class="items counter-wrapper">
+                    <div class="items counter-wrapper" style="display: none;">
                         <div class="items__control" data-action="minus">-</div>
                         <div class="items__current" data-counter>1</div>
                         <div class="items__control" data-action="plus">+</div>
@@ -153,9 +152,8 @@ fetchData(UrlCategories)
                 </div>
             </div>
         </div>
-        </div>
+    </div>
 </div>`
-
 
         // добавляем шаблон на экран
         contentParent.insertAdjacentHTML('beforeend', contHTML);
@@ -165,10 +163,12 @@ fetchData(UrlCategories)
         tooltipTriggerList.map(function (tooltipTriggerEl) {
         return new bootstrap.Tooltip(tooltipTriggerEl);
         });
-
+    
+        // проверка наличия товара в корзине и скрытие блоков "добавить в корзинуы"
+        initializeCartItems();
 
         // Обработчик на изображениях
-        handleImageClick();
+        handleImageClick_2();
 
         });
 
@@ -183,10 +183,40 @@ fetchData(UrlCategories)
 
 
 
+// Функция для инициализации товаров на странице при загрузке
+function initializeCartItems() {
+    // Получаем все карточки товаров на странице
+    const productCards = document.querySelectorAll('.card-product');
+    
+    // Получаем данные корзины из localStorage
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+    productCards.forEach(card => {
+        const productId = card.dataset.id;
+        const addToCartButton = card.querySelector('#add_Cart');
+        const counterWrapper = card.querySelector('.counter-wrapper');
+        const productInCart = cart.find(item => item.id === productId);
+
+        if (productInCart) {
+            // Если товар есть в корзине, показываем счетчик и скрываем кнопку "В корзину"
+            counterWrapper.style.display = 'flex';
+            addToCartButton.style.display = 'none';
+
+            // Устанавливаем текущее количество товара из localStorage
+            card.querySelector('[data-counter]').innerText = productInCart.counter;
+        } else {
+            // Если товара нет в корзине, скрываем счетчик и показываем кнопку "В корзину"
+            counterWrapper.style.display = 'none';
+            addToCartButton.style.display = 'block';
+        }
+    });
+}
+
+
   
 //   Открытие изображений в модальном окне
 // Функция для работы с изображениями
-function handleImageClick() {
+function handleImageClick_2() {
     // Находим все изображения с классом "imgCart"
     const imgElements = document.querySelectorAll('.imgCart');
 
@@ -203,3 +233,9 @@ function handleImageClick() {
         });
     });
 }
+
+
+
+
+
+

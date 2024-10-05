@@ -20,7 +20,7 @@ body {
     max-width: 220px;
 }
 .backgr-img {
-    background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url('/img/backgr.jpeg');
+    background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url('backgr.jpeg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -111,7 +111,7 @@ body {
     font-weight: bold;
 }
 .img-second-block_pizza {
-    border-top-right-radius: 100px;
+    /* border-top-right-radius: 100px; */
     max-width: 90%;
     height: auto;
 }

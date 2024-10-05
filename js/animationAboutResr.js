@@ -59,10 +59,10 @@ document.getElementById('modalImage').addEventListener('click', () => {
 
   // Обработчик кликов на изображения в блоке второго блока
   document.querySelector('.img-second-block_pizza').addEventListener('click', function() {
-    openImageModal('/img/aboutRest/second-block_pizza.png'); // Указываем путь к изображению
+    openImageModal('2.jpg'); // Указываем путь к изображению
   });
 
   // Обработчик кликов на изображения в нижнем блоке
   document.querySelector('.img-btm img').addEventListener('click', function() {
-    openImageModal('/img/aboutRest/btm-block_rest.png'); // Указываем путь к изображению
+    openImageModal('1.jpg'); // Указываем путь к изображению
   });

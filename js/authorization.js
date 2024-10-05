@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
         event.preventDefault();
 
         // валидация номера телефона
-        if (phoneLogIn.value.length !== 11) {
+        if (phoneLogIn.value.length !== 10) {
             phoneLogIn.classList.add('is-invalid');
             phoneErrorMessageLogIn.style.display = 'block';
         } else {
@@ -39,6 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Если все поля валидны, можно отправить форму
         if (!phoneLogIn.classList.contains('is-invalid') && !passwordLogIn.classList.contains('is-invalid')) {
         // console.log('test123')
+
         // Авторизация
         handleLogin()
 
@@ -92,7 +93,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         // валидация номера телефона
-        if (phoneReg.value.length !== 11) {
+        if (phoneReg.value.length !== 10) {
             phoneReg.classList.add('is-invalid');
             phoneErrorMessageReg.style.display = 'block';
         } else {
@@ -182,16 +183,17 @@ function hideModalReg () {
     }
 }
 
+// авторизация
 async function handleLogin () {
     try {
         const userName = document.getElementById ('id-phone-input_login').value;
         const password = document.getElementById('id-password-input_login').value;
 
         const userData = {
-            username: userName,
+            username: '8'+ userName,
             password: password
         };
-        // console.log('Запрос:', userData);
+        console.log('Запрос:', userData);
 
         const data = await login(userData)
         saveData(data)
@@ -270,6 +272,7 @@ function saveDataReg (data, userName, firstName) {
     localStorage.setItem('phone', userName);
 }
 
+
 // Регистрация
 async function handleReg () {
     try {
@@ -282,7 +285,7 @@ async function handleReg () {
         
         // объект
         const userData = {
-            username: userName,
+            username: '8'+ userName,
             password: password,
             email: emailInp,
             first_name: firstName,
